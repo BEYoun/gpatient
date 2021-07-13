@@ -89,7 +89,7 @@ const navigation = {
     ]
 }
 
-export const Footer = () => {
+const Footer = () => {
     return (
         <footer className="bg-gray-800" aria-labelledby="footerHeading">
             <h2 id="footerHeading" className="sr-only">
@@ -194,3 +194,4 @@ export const Footer = () => {
         </footer>
     )
 }
+export default Footer;

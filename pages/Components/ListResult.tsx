@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import doctorsApi, { Data } from '../api/doctorsApi';
-import { CardDocResult } from './CardDocResult';
+import CardDocResult from './CardDocResult';
 
-export const ListResult = () => {
+const ListResult = () => {
     const [doctors, setDoctors] = useState<Data[]>([]);
     useEffect(() => {
         const data = doctorsApi()
@@ -21,3 +21,4 @@ export const ListResult = () => {
         </div>
     )
 }
+export default ListResult

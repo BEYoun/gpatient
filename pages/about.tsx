@@ -1,5 +1,5 @@
-import { Footer } from "./Components/common/Footers";
-import { Header } from "./Components/common/Header";
+import Footer from "./Components/common/Footers";
+import Header from "./Components/common/Header";
 import Process from "./Components/Process";
 
 export default function About() {

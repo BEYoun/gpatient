@@ -21,7 +21,7 @@ type Props = {
     theme: string
 }
 
-export const Header: React.FC<Props> = ({ theme }) => {
+const Header: React.FC<Props> = ({ theme }) => {
     return (
         <Popover className="relative">
             {({ open }) => (
@@ -139,3 +139,4 @@ export const Header: React.FC<Props> = ({ theme }) => {
 
     )
 }
+export default Header;
