@@ -14,7 +14,7 @@ const ListResult = () => {
             <div className="max-w-2xl mx-auto px-6 py-4 lg:max-w-7xl ">
                 <ul className="grid grid-cols-1 gap-6">
                     {doctors.map((person) => (
-                        <CardDocResult key={person.email} person={person} />
+                        <CardDocResult key={person?.email} person={person} />
                     ))}
                 </ul>
             </div>

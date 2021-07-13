@@ -14,7 +14,7 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
     return (
         <>
             <li
-                key={person.email}
+                key={person?.email}
                 className="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200 z-10"
                 onClick={() => setOpen(true)}
             >
@@ -25,13 +25,13 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
                                 <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                             </svg>
                         </span>
-                        <h3 className="mt-6 text-gray-900 text-sm font-medium">{person.firstname} {person.lastname}</h3>
+                        <h3 className="mt-6 text-gray-900 text-sm font-medium">{person?.firstname} {person?.lastname}</h3>
                         <dl className="mt-1 flex-grow flex flex-col justify-between">
                             <dt className="sr-only">Title</dt>
-                            <dd className="text-gray-500 text-sm capitalize">{person.specialty}</dd>
+                            <dd className="text-gray-500 text-sm capitalize">{person?.specialty}</dd>
                             <dt className="sr-only">Role</dt>
                             <dd className="mt-3 space-x-1">
-                                {person.typeConsulation.map((t: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined, index: React.Key | null | undefined) => (
+                                {person?.typeConsulation.map((t: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined, index: React.Key | null | undefined) => (
                                     <span key={index} className="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">
                                         {t}
                                     </span>
@@ -43,30 +43,30 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
                     <div className="hidden md:block overflow-hidden text-left w-full">
                         <div className="px-4 py-5 sm:px-6">
                             <h3 className="text-lg leading-6 font-medium text-gray-900">Information</h3>
-                            <p className="mt-1 max-w-2xl text-sm text-gray-500">Details du Dr. <span className="font-bold capitalize">{person.firstname} {person.lastname}</span>.</p>
+                            <p className="mt-1 max-w-2xl text-sm text-gray-500">Details du Dr. <span className="font-bold capitalize">{person?.firstname} {person?.lastname}</span>.</p>
                         </div>
                         <div className="border-t border-gray-200 px-4 py-5 sm:px-6">
                             <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                                 <div className="sm:col-span-1">
                                     <dt className="text-sm font-medium text-gray-500">Address</dt>
-                                    <dd className="mt-1 text-sm text-gray-900">{person.address}</dd>
+                                    <dd className="mt-1 text-sm text-gray-900">{person?.address}</dd>
                                 </div>
                                 <div className="sm:col-span-1">
                                     <dt className="text-sm font-medium text-gray-500">Email address</dt>
-                                    <dd className="mt-1 text-sm text-gray-900">{person.email}</dd>
+                                    <dd className="mt-1 text-sm text-gray-900">{person?.email}</dd>
                                 </div>
                                 <div className="sm:col-span-1">
                                     <dt className="text-sm font-medium text-gray-500">Numéro de téléphone</dt>
-                                    <dd className="mt-1 text-sm text-gray-900">{person.phonePro}</dd>
+                                    <dd className="mt-1 text-sm text-gray-900">{person?.phonePro}</dd>
                                 </div>
                                 <div className="sm:col-span-1">
                                     <dt className="text-sm font-medium text-gray-500">Moyens de paiement</dt>
-                                    <dd className="mt-1 text-sm text-gray-900 uppercase font-bold">{person.payment.map((p: any, index: number) => (<>{p}{index != person.payment.length - 1 ? ", " : ""}</>))}</dd>
+                                    <dd className="mt-1 text-sm text-gray-900 uppercase font-bold">{person?.payment.map((p: any, index: number) => (<>{p}{index != person?.payment.length - 1 ? ", " : ""}</>))}</dd>
                                 </div>
                                 <div className="sm:col-span-1">
                                     <dt className="text-sm font-medium text-gray-500">Disponibilité</dt>
                                     <dd className="mt-1 text-sm text-gray-900 space-y-1">
-                                        {person.hours.map((h: { id: React.Key | null | undefined; days: any[]; hours: any[] }) => (
+                                        {person?.hours.map((h: { id: React.Key | null | undefined; days: any[]; hours: any[] }) => (
                                             <div className="flex space-x-1 overflow-hidden items-center" key={h.id}>
                                                 {h.days.map((d: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined, index: React.Key | null | undefined) => (
                                                     <span key={index} className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-green-700">
@@ -90,7 +90,7 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
                     <div className="-mt-px flex divide-x divide-gray-200">
                         <div className="w-0 flex-1 flex">
                             <a
-                                href={`mailto:${person.email}`}
+                                href={`mailto:${person?.email}`}
                                 className="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500"
                             >
                                 <MailIcon className="w-5 h-5 text-gray-400" aria-hidden="true" />
@@ -99,7 +99,7 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
                         </div>
                         <div className="-ml-px w-0 flex-1 flex">
                             <a
-                                href={`tel:${person.phonePro}`}
+                                href={`tel:${person?.phonePro}`}
                                 className="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500"
                             >
                                 <PhoneIcon className="w-5 h-5 text-gray-400" aria-hidden="true" />
