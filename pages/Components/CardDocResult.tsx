@@ -9,7 +9,7 @@ function classNames(...classes: any) {
 type Props = {
     person: any
 }
-export const CardDocResult: React.FC<Props> = ({ person }) => {
+const CardDocResult: React.FC<Props> = ({ person }) => {
     const [open, setOpen] = useState(false)
     return (
         <>
@@ -297,3 +297,5 @@ export const CardDocResult: React.FC<Props> = ({ person }) => {
         </>
     )
 }
+
+export default CardDocResult;

@@ -7,8 +7,8 @@ import {
 } from '@heroicons/react/outline'
 
 import backgroundHero from '../assets/hero.jpg'
-import { Footer } from './Components/common/Footers'
-import { Header } from './Components/common/Header'
+import Footer from './Components/common/Footers'
+import Header from './Components/common/Header'
 import Link from 'next/link'
 
 const etapes = [
