@@ -1,0 +1,94 @@
+[
+    {
+        "firstname": "younes",
+        "lastname" : "beaila",
+        "specialty" : "généraliste",
+        "phonePro":"+212 666666666",
+        "email": "beailayounes@gmail.com",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"Andalouse 4 rue 18",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Mo", "Tu", "We", "Th", "Fri"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "13:30",
+                        "end" : "19:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["video","presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+    {
+        "firstname": "anas",
+        "lastname" : "ghammadi",
+        "specialty" : "ophtalmologue",
+        "phonePro":"+212 7777777",
+        "email": "anasghammadi@gmail.com",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"Andalouse 4 rue 18",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Mo", "Tu", "We", "Th", "Fri"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "13:30",
+                        "end" : "19:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["video","presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    }
+]
