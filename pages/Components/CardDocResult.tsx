@@ -25,10 +25,10 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
                                 <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                             </svg>
                         </span>
-                        <h3 className="mt-6 text-gray-900 text-sm font-medium">{person?.firstname} {person?.lastname}</h3>
+                        <h3 className="mt-6 text-gray-900 text-sm font-medium">{person ? person?.firstname+" "+person?.lastname: ""}</h3>
                         <dl className="mt-1 flex-grow flex flex-col justify-between">
                             <dt className="sr-only">Title</dt>
-                            <dd className="text-gray-500 text-sm capitalize">{person?.specialty}</dd>
+                            <dd className="text-gray-500 text-sm capitalize">{person ? person?.specialty: ""}</dd>
                             <dt className="sr-only">Role</dt>
                             <dd className="mt-3 space-x-1">
                                 {person?.typeConsulation.map((t: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined, index: React.Key | null | undefined) => (
