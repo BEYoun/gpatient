@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useMeQuery } from "../graphql/generated/graphql";
 
 export const useIsAuth = () => {
+    
   const { data, loading } = useMeQuery();
   const router = useRouter();
   useEffect(() => {
