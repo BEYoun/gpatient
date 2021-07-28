@@ -1,6 +1,6 @@
-import Footer from "../Components/common/Footers";
-import Header from "../Components/common/Header";
-import Process from "../Components/Process";
+import Footer from "../components/common/Footers";
+import Header from "../components/common/Header";
+import Process from "../components/Process";
 import { withApollo } from "../utils/withApollo";
 
 const About: React.FC = () => {

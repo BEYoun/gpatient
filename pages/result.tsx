@@ -1,6 +1,6 @@
-import Header from "../Components/common/Header";
+import Header from "../components/common/Header";
 import { SearchIcon } from '@heroicons/react/solid'
-import ListResult from "../Components/ListResult";
+import ListResult from "../components/ListResult";
 import { withApollo } from "../utils/withApollo";
 
 

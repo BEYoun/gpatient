@@ -8,8 +8,8 @@ import {
 import { withApollo } from '../utils/withApollo'
 
 import backgroundHero from '../assets/hero.jpg'
-import Footer from '../Components/common/Footers'
-import Header from '../Components/common/Header'
+import Footer from '../components/common/Footers'
+import Header from '../components/common/Header'
 import Link from 'next/link'
 
 const etapes = [

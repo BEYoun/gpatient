@@ -1,7 +1,7 @@
-import Footer from "../Components/common/Footers";
-import Header from "../Components/common/Header";
-import ContactSection from "../Components/ContactSection";
-import FAQ from "../Components/FAQ";
+import Footer from "../components/common/Footers";
+import Header from "../components/common/Header";
+import ContactSection from "../components/ContactSection";
+import FAQ from "../components/FAQ";
 import { withApollo } from "../utils/withApollo";
 
 const Contact: React.FC = () => {
