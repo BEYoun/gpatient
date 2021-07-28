@@ -1,9 +1,10 @@
-import Header from "./Components/common/Header";
+import Header from "../Components/common/Header";
 import { SearchIcon } from '@heroicons/react/solid'
-import ListResult from "./Components/ListResult";
+import ListResult from "../Components/ListResult";
+import { withApollo } from "../utils/withApollo";
 
 
-export default function Result() {
+const Result: React.FC = () => {
     return (
         <div className="bg-gray-100 min-h-screen">
             <div className="bg-primary">
@@ -75,3 +76,5 @@ export default function Result() {
         </div>
     )
 }
+
+export default withApollo({ ssr: false })(Result);

@@ -1,8 +1,9 @@
-import Footer from "./Components/common/Footers";
-import Header from "./Components/common/Header";
-import Process from "./Components/Process";
+import Footer from "../Components/common/Footers";
+import Header from "../Components/common/Header";
+import Process from "../Components/Process";
+import { withApollo } from "../utils/withApollo";
 
-export default function About() {
+const About: React.FC = () => {
     return (
         <div className="bg-gray-100">
             <div className="">
@@ -32,3 +33,5 @@ export default function About() {
         </div>
     )
 }
+
+export default withApollo({ ssr: false })(About);

@@ -5,10 +5,11 @@ import {
   RefreshIcon,
   SearchIcon,
 } from '@heroicons/react/outline'
+import { withApollo } from '../utils/withApollo'
 
 import backgroundHero from '../assets/hero.jpg'
-import Footer from './Components/common/Footers'
-import Header from './Components/common/Header'
+import Footer from '../Components/common/Footers'
+import Header from '../Components/common/Header'
 import Link from 'next/link'
 
 const etapes = [
@@ -33,7 +34,7 @@ const etapes = [
 ]
 
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <div className="bg-white">
       <div className="min-h-screen flex flex-col">
@@ -140,3 +141,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default withApollo({ ssr: false })(Home);

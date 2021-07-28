@@ -7,7 +7,11 @@ import {
     MenuIcon,
     XIcon,
 } from '@heroicons/react/outline'
-import profilePic from '../../../assets/logo.svg'
+import profilePic from '../../assets/logo.svg'
+import { useLogoutMutation, useMeQuery } from '../../graphql/generated/graphql'
+import { useDispatch } from 'react-redux'
+import { clearSession } from '../../store/ducks/session'
+
 const solutions = [
     {
         name: 'solution 1',
@@ -22,6 +26,10 @@ type Props = {
 }
 
 const Header: React.FC<Props> = ({ theme }) => {
+    const { data } = useMeQuery()
+    // console.log(`data`, data)
+    const dispatch = useDispatch()
+    const [logout] = useLogoutMutation()
     return (
         <Popover className="relative">
             {({ open }) => (
@@ -60,16 +68,36 @@ const Header: React.FC<Props> = ({ theme }) => {
                                         Contactez Nous
                                     </a>
                                 </Link>
+                                <Link href='https://gdocteur.vercel.app/'>
+                                    <a className={`text-base font-medium ${theme === "black" ? "text-gray-300" : "text-black"} hover:text-white"`}>
+                                        Etes-vous un profesionnel ?
+                                    </a>
+                                </Link>
                             </Popover.Group>
-                            <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
-                                <Link href='/contact'>
+
+                            {!data?.userSession?.user ? <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
+                                <Link href='/login'>
+                                    <a className={`text-base font-medium ${theme === "black" ? "text-gray-300" : "text-black"} hover:text-white"`}>
+                                        Se connecter
+                                    </a>
+                                </Link>
+                                <Link href='/register'>
                                     <a
                                         className={`whitespace-nowrap ${theme === "black" ? "bg-white" : "bg-accent"} border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600" : "text-black"}  hover:bg-indigo-50`}
                                     >
-                                        Besoin d&apos;aide?
+                                        S&apos;enregistrer
                                     </a>
                                 </Link>
-                            </div>
+                            </div> : <button
+                                className={`whitespace-nowrap ${theme === "black" ? "bg-white" : "bg-accent"} border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600" : "text-black"}  hover:bg-indigo-50`}
+                                onClick={async () => {
+                                    logout()
+                                    dispatch(clearSession())
+                                }}
+                            >
+                                Logout
+                            </button>}
+
                         </div>
                     </div>
 

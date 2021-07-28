@@ -1,9 +1,10 @@
-import Footer from "./Components/common/Footers";
-import Header from "./Components/common/Header";
-import ContactSection from "./Components/ContactSection";
-import FAQ from "./Components/FAQ";
+import Footer from "../Components/common/Footers";
+import Header from "../Components/common/Header";
+import ContactSection from "../Components/ContactSection";
+import FAQ from "../Components/FAQ";
+import { withApollo } from "../utils/withApollo";
 
-export default function Contact() {
+const Contact: React.FC = () => {
     return (
         <div className="bg-gray-100">
             <div className="">
@@ -42,3 +43,4 @@ export default function Contact() {
         </div>
     )
 }
+export default withApollo({ ssr: false })(Contact);
