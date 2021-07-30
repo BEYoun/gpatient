@@ -4,7 +4,7 @@ import { NextPageContext } from "next";
 
 const createClient = (ctx: NextPageContext) =>
   new ApolloClient({
-    uri: 'https://server.goodoc.co/graphql',
+    uri: 'http://server.goodoc.co/graphql',
     credentials: "include",
     headers: {
       cookie:
