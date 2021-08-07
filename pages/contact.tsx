@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
             </div>
 
             <ContactSection />
-            <FAQ />
+            {/* <FAQ /> */}
 
 
             {/* Footer */}

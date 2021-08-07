@@ -2,6 +2,7 @@ import Header from "../components/common/Header";
 import { SearchIcon } from '@heroicons/react/solid'
 import ListResult from "../components/ListResult";
 import { withApollo } from "../utils/withApollo";
+import Footer from "../components/common/Footers";
 
 
 const Result: React.FC = () => {
@@ -72,7 +73,7 @@ const Result: React.FC = () => {
 
             <ListResult />
 
-
+            <Footer />
         </div>
     )
 }
