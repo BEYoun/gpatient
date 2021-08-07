@@ -11,25 +11,25 @@ import backgroundHero from '../assets/hero.jpg'
 import Footer from '../components/common/Footers'
 import Header from '../components/common/Header'
 import Link from 'next/link'
+import etape1 from '../assets/etape1.svg'
+import etape2 from '../assets/etape2.svg'
+import etape3 from '../assets/etape3.svg'
 
 const etapes = [
   {
     title: 'Je crée un compte',
     href: '#',
-    imageUrl:
-      'https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+    imageUrl: etape1,
   },
   {
     title: 'Je recherche une spécialité',
     href: '#',
-    imageUrl:
-      'https://images.unsplash.com/photo-1547586696-ea22b4d4235d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+    imageUrl: etape2,
   },
   {
     title: 'Je choisis mon practicien',
     href: '#',
-    imageUrl:
-      'https://images.unsplash.com/photo-1492724441997-5dc865305da7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80',
+    imageUrl: etape3,
   },
 ]
 
@@ -119,7 +119,14 @@ const Home: React.FC = () => {
               {etapes.map((post) => (
                 <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
                   <div className="flex-shrink-0">
-                    <img className="h-48 w-full object-cover" src={post.imageUrl} alt="" />
+                    <div className="h-48 w-full relative object-cover">
+                      <Image
+                        src={post.imageUrl}
+                        alt="logo"
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
                   </div>
                   <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                     <div className="flex-1">

@@ -15,6 +15,7 @@ module.exports = {
         accent: '#FFE195',
         'accent-deep': '#E5B742',
         'accent-low': '#FFFBF1',
+        'primary-dark': '#001737'
         }
     }
   },
