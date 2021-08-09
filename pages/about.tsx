@@ -14,7 +14,7 @@ const About: React.FC = () => {
                     <div className=" px-0 sm:px-4 flex flex-col h-full">
                         <div className="max-w-2xl mb-5">
                             <h2 className="text-3xl font-extrabold sm:tracking-tight sm:text-5xl">
-                                A propos de <span className="text-primary">Goodoc P</span>
+                                &Agrave; propos de <span className="text-primary">Goodoc</span>
                             </h2>
                         </div>
                         <p className="text-xl text-gray-500 max-w-3xl">
