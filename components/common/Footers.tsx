@@ -2,7 +2,7 @@
 
 const navigation = {
     main: [
-        { name: 'A propos', href: '#' },
+        { name: 'À propos', href: '#' },
         { name: 'Accueil', href: '#' },
         { name: 'Nous contacter', href: '#' },
     ],
@@ -85,7 +85,7 @@ const Footer = () => {
                 <nav className="-mx-5 flex flex-wrap justify-center" aria-label="Footer">
                     {navigation.main.map((item) => (
                         <div key={item.name} className="px-5 py-2">
-                            <a href={item.href} className="text-base text-white hover:text-gray-900">
+                            <a href={item.href} className="text-base text-white hover:text-accent">
                                 {item.name}
                             </a>
                         </div>
@@ -94,7 +94,7 @@ const Footer = () => {
                 <nav className="-mx-5 flex flex-wrap justify-center" aria-label="Footer">
                     {navigation.sub.map((item) => (
                         <div key={item.name} className="px-5 py-2">
-                            <a href={item.href} className="text-base text-white hover:text-gray-900">
+                            <a href={item.href} className="text-base text-white hover:text-accent">
                                 {item.name}
                             </a>
                         </div>
@@ -140,7 +140,7 @@ const Footer = () => {
                         </a>
                     ))}
                 </div>
-                <p className="mt-8 text-center text-base text-gray-400">&copy;  Copyright 2020 Goodoc p, tous droits réservé.</p>
+                <p className="mt-8 text-center text-base text-gray-400">&copy;  Copyright 2021 Goodoc, tous droits réservé.</p>
             </div>
         </footer>
     )

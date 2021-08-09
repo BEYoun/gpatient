@@ -61,7 +61,7 @@ const Home: React.FC = () => {
                 Trouvez un Médecin ou un Professionnel de la Santé à proximité de chez vous !
               </h2>
             </div>
-            <div className="mt-20 w-full lg:mt-0 pt-2">
+            <div className="w-full lg:mt-0 pt-2">
               <div className="flex flex-col space-y-1 md:space-y-0 md:space-x-2 items-center md:flex-row">
                 <div className="relative rounded-md shadow-sm flex-1 w-full">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -112,12 +112,12 @@ const Home: React.FC = () => {
             <div className="text-center">
               <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Comment ça marche?</h2>
               <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-                GooDoc Patient, c&apos;est un ensemble de services et d&apos;accompagnement quotidien.
+                GooDoc, c&apos;est un ensemble de services et d&apos;accompagnement quotidien.
               </p>
             </div>
             <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
               {etapes.map((post) => (
-                <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden text-center">
                   <div className="flex-shrink-0">
                     <div className="h-48 w-full relative object-cover">
                       <Image
