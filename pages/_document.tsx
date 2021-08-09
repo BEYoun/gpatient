@@ -10,7 +10,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZFQFYCWZC"></script>
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZFQFYCWZC"></script>
                     <script
                         dangerouslySetInnerHTML={{
                             __html: `window.dataLayer = window.dataLayer || [];
@@ -19,7 +19,7 @@ class MyDocument extends Document {
 
                                 gtag('config', 'G-3ZFQFYCWZC');`
                         }}
-                    /> */}
+                    />
                     <link rel="icon" href="/assets/miniLogo.ico" />
                 </Head>
                 <body>
@@ -30,3 +30,5 @@ class MyDocument extends Document {
         )
     }
 }
+
+export default MyDocument
