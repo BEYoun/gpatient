@@ -14,7 +14,7 @@ import { clearSession } from '../../store/ducks/session'
 
 const solutions = [
     {
-        name: 'solution 1',
+        name: 'Se connecter',
         description: 'Get a better understanding of where your traffic is coming from.',
         href: '#',
         icon: ChartBarIcon,
@@ -58,16 +58,6 @@ const Header: React.FC<Props> = ({ theme }) => {
                                 </Popover.Button>
                             </div>
                             <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                                {/* <Link href='/about'>
-                                    <a className={`text-base font-medium ${theme === "black" ? "text-gray-300" : "text-black"} hover:text-white"`}>
-                                        A propos
-                                    </a>
-                                </Link>
-                                <Link href='/contact'>
-                                    <a className={`text-base font-medium ${theme === "black" ? "text-gray-300" : "text-black"} hover:text-white"`}>
-                                        Contactez Nous
-                                    </a>
-                                </Link> */}
                                 <Link href='https://gdocteur.vercel.app/'>
                                     <a className={`place-self-end text-base font-medium text-opacity-70 ${theme === "black" ? "text-gray-300" : "text-black"} hover:text-white hover:text-opacity-100"`}>
                                         Êtes-vous un professionnel de la santé?
@@ -76,11 +66,6 @@ const Header: React.FC<Props> = ({ theme }) => {
                             </Popover.Group>
 
                             {!data?.userSession?.user ? <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
-                                {/* <Link href='/login'>
-                                    <a className={`text-base font-medium ${theme === "black" ? "text-gray-300" : "text-black"} hover:text-white"`}>
-                                        Se connecter
-                                    </a>
-                                </Link> */}
                                 <Link href='/login'>
                                     <a
                                         className={`whitespace-nowrap ${theme === "black" ? "bg-white" : "bg-accent"} border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600" : "text-black"}  hover:bg-indigo-50`}
