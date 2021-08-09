@@ -20,6 +20,7 @@ class MyDocument extends Document {
                                 gtag('config', 'G-3ZFQFYCWZC');`
                         }}
                     /> */}
+                    <link rel="icon" href="/assets/miniLogo.ico" />
                 </Head>
                 <body>
                     <Main />
