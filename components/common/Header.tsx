@@ -6,6 +6,7 @@ import {
     ChartBarIcon,
     MenuIcon,
     XIcon,
+    LoginIcon
 } from '@heroicons/react/outline'
 import profilePic from '../../assets/logo.svg'
 import { useLogoutMutation, useMeQuery } from '../../graphql/generated/graphql'
@@ -16,8 +17,8 @@ const solutions = [
     {
         name: 'Se connecter',
         description: 'Get a better understanding of where your traffic is coming from.',
-        href: '#',
-        icon: ChartBarIcon,
+        href: '/login',
+        icon: LoginIcon,
     },
 ]
 
@@ -121,14 +122,12 @@ const Header: React.FC<Props> = ({ theme }) => {
                                     <div className="mt-6">
                                         <nav className="grid gap-y-8">
                                             {solutions.map((item) => (
-                                                <a
-                                                    key={item.name}
-                                                    href={item.href}
-                                                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                                                >
-                                                    <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
-                                                    <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
-                                                </a>
+                                                <Link key={item.name} href={item.href}>
+                                                    <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50" >
+                                                        <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                                                        <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
+                                                    </a>
+                                                </Link>
                                             ))}
                                         </nav>
                                     </div>
