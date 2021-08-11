@@ -71,11 +71,11 @@ const Home: React.FC = () => {
                     type="text"
                     name="email"
                     id="email"
-                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-l-full h-20"
+                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 md:rounded-l-full h-20"
                     placeholder="Spécialiste, practicien..."
                   />
                 </div>
-                <div className="relative shadow-sm w-72">
+                <div className="relative shadow-sm w-full md:w-72">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <InboxIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
                   </div>
@@ -90,7 +90,7 @@ const Home: React.FC = () => {
                 <Link href="/result">
                   <a
                     href="#"
-                    className="md:w-64 w-full justify-center inline-flex items-center px-6 h-20 border border-transparent shadow-sm text-base font-medium rounded-r-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="md:w-64 w-full justify-center inline-flex items-center px-6 h-20 border border-transparent shadow-sm text-base font-medium md:rounded-r-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
                     Chercher
                     <RefreshIcon className="ml-3 -mr-1 h-5 w-5" aria-hidden="true" />
