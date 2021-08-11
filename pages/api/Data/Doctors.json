@@ -1,9 +1,9 @@
 [
     {
-        "firstname": "Larbi",
-        "lastname" : "EL ARQAM",
-        "specialty" : "Pédiatre",
-        "phonePro":"",
+        "firstname": "AIT",
+        "lastname" : " Ahmed",
+        "specialty" : "Généraliste",
+        "phonePro":"0522-38-86-37",
         "email": "",
         "prices":[
             {
@@ -14,7 +14,7 @@
                 }
             }
         ],
-        "address":"Andalouse 4 rue 18",
+        "address":"350 boulevard Lahraouine cite Djemaa Casablanca",
         "hours":[
             {
                 "id":"1",
@@ -26,7 +26,7 @@
                     },
                     {
                         "start": "13:30",
-                        "end" : "19:30"
+                        "end" : "17:30"
                     }
                 ]
             },
@@ -41,17 +41,16 @@
                 ]
             }
         ],
-        "typeConsulation":["video","presentiel"],
+        "typeConsulation":["presentiel"],
         "payment": ["chèque", "éspece", "Tpe"]
 
     },
-    
 
     {
-        "firstname": "Ouradini",
-        "lastname" : "LISSAN AL HAK",
-        "specialty" : "Pédiatre",
-        "phonePro":"",
+        "firstname": "KADA ZAIR",
+        "lastname" : " Jamal",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-98-79-68",
         "email": "",
         "prices":[
             {
@@ -62,8 +61,7 @@
                 }
             }
         ],
-        "Ville":"Rabat",
-        "address":"Av Al Massira El Manzeh Comp El Manal Ent D Appt 11°Et ",
+        "address":"8 boulevard yacoub el manssour quartier maarif Casablanca",
         "hours":[
             {
                 "id":"1",
@@ -75,13 +73,13 @@
                     },
                     {
                         "start": "13:30",
-                        "end" : "19:30"
+                        "end" : "17:30"
                     }
                 ]
             },
             {
                 "id":"2",
-                "days": ["Sam"],
+                "days": ["Sa"],
                 "hours": [
                     {
                         "start": "8:30",
@@ -95,13 +93,11 @@
 
     },
 
-
-
-   {
-        "firstname": "ELOUALI",
-        "lastname" : "Tayeb",
-        "specialty" : "Généraliste",
-        "phonePro":"",
+    {
+        "firstname": "HACHADI",
+        "lastname" : "Abdlaziz",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-98-92-81",
         "email": "",
         "prices":[
             {
@@ -112,8 +108,7 @@
                 }
             }
         ],
-        "Ville":"Rabat",
-        "address":"Av Des Far El Menzeh N°920 Cym",
+        "address":"16 rue charam cheikh quartier maarif Casablanca",
         "hours":[
             {
                 "id":"1",
@@ -125,13 +120,13 @@
                     },
                     {
                         "start": "13:30",
-                        "end" : "19:30"
+                        "end" : "17:30"
                     }
                 ]
             },
             {
                 "id":"2",
-                "days": ["Sam"],
+                "days": ["Sa"],
                 "hours": [
                     {
                         "start": "8:30",
@@ -140,702 +135,8 @@
                 ]
             }
         ],
-        "typeConsulation":["video","presentiel"],
+        "typeConsulation":["presentiel"],
         "payment": ["chèque", "éspece", "Tpe"]
-     },
 
-
-
-     {
-          "firstname": "ACHOUR",
-          "lastname" : "Mohamed",
-          "specialty" : "Gynécologue",
-          "phonePro":"",
-          "email": "",
-          "prices":[
-              {
-                  "consultation":"300DH",
-                  "video": {
-                      "price": "100dh",
-                      "condition": "<10min" 
-                  }
-              }
-          ],
-          "Ville":"Rabat",
-          "address":"Av Hassan Ii Res Lissafi",
-          "hours":[
-              {
-                  "id":"1",
-                  "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                  "hours": [
-                      {
-                          "start": "8:30",
-                          "end" : "12:30"
-                      },
-                      {
-                          "start": "13:30",
-                          "end" : "19:30"
-                      }
-                  ]
-              },
-              {
-                  "id":"2",
-                  "days": ["Sam"],
-                  "hours": [
-                      {
-                          "start": "8:30",
-                          "end" : "12:30"
-                      }
-                  ]
-              }
-          ],
-          "typeConsulation":["video","presentiel"],
-          "payment": ["chèque", "éspece", "Tpe"]
-       },
-
-
-
-       {
-            "firstname": "RATIB",
-            "lastname" : "Latifa",
-            "specialty" : "Généraliste",
-            "phonePro":"",
-            "email": "",
-            "prices":[
-                {
-                    "consultation":"300DH",
-                    "video": {
-                        "price": "100dh",
-                        "condition": "<10min" 
-                    }
-                }
-            ],
-            "Ville":"Rabat",
-            "address":"Al Mountazah Imm 13 N° 7 Hay El Fath",
-            "hours":[
-                {
-                    "id":"1",
-                    "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                    "hours": [
-                        {
-                            "start": "9:00",
-                            "end" : "12:30"
-                        },
-                        {
-                            "start": "14:30",
-                            "end" : "17:30"
-                        }
-                    ]
-                },
-                {
-                    "id":"2",
-                    "days": ["Sam"],
-                    "hours": [
-                        {
-                            "start": "10:00",
-                            "end" : "13:00"
-                        }
-                    ]
-                }
-            ],
-            "typeConsulation":["video","presentiel"],
-            "payment": ["chèque", "éspece", "Tpe"]
-         },
-
-
-
-         {
-              "firstname": "BOUZOUBAA",
-              "lastname" : "Abdilah",
-              "specialty" : "Généraliste",
-              "phonePro":"",
-              "email": "",
-              "prices":[
-                  {
-                      "consultation":"300DH",
-                      "video": {
-                          "price": "100dh",
-                          "condition": "<10min" 
-                      }
-                  }
-              ],
-              "Ville":"Rabat",
-              "address":"Amal 4 Comlement N°27 Av Al Massira",
-              "hours":[
-                  {
-                      "id":"1",
-                      "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                      "hours": [
-                          {
-                              "start": "9:00",
-                              "end" : "12:30"
-                          },
-                          {
-                              "start": "14:30",
-                              "end" : "17:30"
-                          }
-                      ]
-                  },
-                  {
-                      "id":"2",
-                      "days": ["Sam"],
-                      "hours": [
-                          {
-                              "start": "10:00",
-                              "end" : "13:00"
-                          }
-                      ]
-                  }
-              ],
-              "typeConsulation":["presentiel"],
-              "payment": ["chèque", "éspece", "Tpe"]
-           },
-
-
-
-           {
-                "firstname": "BELEBASS",
-                "lastname" : "Sanaa",
-                "specialty" : "Généraliste",
-                "phonePro":"",
-                "email": "",
-                "prices":[
-                    {
-                        "consultation":"300DH",
-                        "video": {
-                            "price": "100dh",
-                            "condition": "<10min" 
-                        }
-                    }
-                ],
-                "Ville":"Rabat",
-                "address":"Bd Sidi Med Med Ben Abdellah N° 218 Cym",
-                "hours":[
-                    {
-                        "id":"1",
-                        "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                        "hours": [
-                            {
-                                "start": "9:00",
-                                "end" : "12:30"
-                            },
-                            {
-                                "start": "14:30",
-                                "end" : "17:30"
-                            }
-                        ]
-                    },
-                    {
-                        "id":"2",
-                        "days": ["Sam"],
-                        "hours": [
-                            {
-                                "start": "10:00",
-                                "end" : "13:00"
-                            }
-                        ]
-                    }
-                ],
-                "typeConsulation":["presentiel"],
-                "payment": ["chèque", "éspece", "Tpe"]
-             },
-
-
-
-             {
-                  "firstname": "BENOMAR",
-                  "lastname" : "Said",
-                  "specialty" : "Cardiologue",
-                  "phonePro":"",
-                  "email": "",
-                  "prices":[
-                      {
-                          "consultation":"300DH",
-                          "video": {
-                              "price": "100dh",
-                              "condition": "<10min" 
-                          }
-                      }
-                  ],
-                  "Ville":"Rabat",
-                  "address":"Rue Sahel El Aaj N°3 Diour Jamaa",
-                  "hours":[
-                      {
-                          "id":"1",
-                          "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                          "hours": [
-                              {
-                                  "start": "9:00",
-                                  "end" : "12:30"
-                              },
-                              {
-                                  "start": "14:30",
-                                  "end" : "17:30"
-                              }
-                          ]
-                      },
-                      {
-                          "id":"2",
-                          "days": ["Sam"],
-                          "hours": [
-                              {
-                                  "start": "10:00",
-                                  "end" : "13:00"
-                              }
-                          ]
-                      }
-                  ],
-                  "typeConsulation":["presentiel"],
-                  "payment": ["chèque", "éspece", "Tpe"]
-               },
-
-
-
-               {
-                    "firstname": "BENNANI",
-                    "lastname" : "Khalid",
-                    "specialty" : "Pédiatre",
-                    "phonePro":"",
-                    "email": "",
-                    "prices":[
-                        {
-                            "consultation":"300DH",
-                            "video": {
-                                "price": "100dh",
-                                "condition": "<10min" 
-                            }
-                        }
-                    ],
-                    "Ville":"Tanger",
-                    "address":"17, Rue Mansour Eddahbi 1Er Étage",
-                    "hours":[
-                        {
-                            "id":"1",
-                            "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                            "hours": [
-                                {
-                                    "start": "9:00",
-                                    "end" : "12:30"
-                                },
-                                {
-                                    "start": "14:30",
-                                    "end" : "17:30"
-                                }
-                            ]
-                        },
-                        {
-                            "id":"2",
-                            "days": ["Sam"],
-                            "hours": [
-                                {
-                                    "start": "10:00",
-                                    "end" : "13:00"
-                                }
-                            ]
-                        }
-                    ],
-                    "typeConsulation":["presentiel"],
-                    "payment": ["chèque", "éspece", "Tpe"]
-                 },
-
-
-
-                 {
-                      "firstname": "SEKKOUR",
-                      "lastname" : "Latifa",
-                      "specialty" : "Gynécologue",
-                      "phonePro":"",
-                      "email": "",
-                      "prices":[
-                          {
-                              "consultation":"300DH",
-                              "video": {
-                                  "price": "100dh",
-                                  "condition": "<10min" 
-                              }
-                          }
-                      ],
-                      "Ville":"Tanger",
-                      "address":"Avenue Youssef Ibn Tachfine",
-                      "hours":[
-                          {
-                              "id":"1",
-                              "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                              "hours": [
-                                  {
-                                      "start": "9:00",
-                                      "end" : "12:30"
-                                  },
-                                  {
-                                      "start": "14:30",
-                                      "end" : "17:30"
-                                  }
-                              ]
-                          },
-                          {
-                              "id":"2",
-                              "days": ["Sam"],
-                              "hours": [
-                                  {
-                                      "start": "10:00",
-                                      "end" : "13:00"
-                                  }
-                              ]
-                          }
-                      ],
-                      "typeConsulation":["presentiel"],
-                      "payment": ["chèque", "éspece", "Tpe"]
-                   },
-
-
-
-                   {
-                        "firstname": "SEMLALI",
-                        "lastname" : "Mériem",
-                        "specialty" : "Gynécologue",
-                        "phonePro":"",
-                        "email": "",
-                        "prices":[
-                            {
-                                "consultation":"300DH",
-                                "video": {
-                                    "price": "100dh",
-                                    "condition": "<10min" 
-                                }
-                            }
-                        ],
-                        "Ville":"Tanger",
-                        "address":"Rue De Fes / Mexique, Immeuble 8, 2°Étage",
-                        "hours":[
-                            {
-                                "id":"1",
-                                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                                "hours": [
-                                    {
-                                        "start": "9:00",
-                                        "end" : "12:30"
-                                    },
-                                    {
-                                        "start": "14:30",
-                                        "end" : "17:30"
-                                    }
-                                ]
-                            },
-                            {
-                                "id":"2",
-                                "days": ["Sam"],
-                                "hours": [
-                                    {
-                                        "start": "10:00",
-                                        "end" : "13:00"
-                                    }
-                                ]
-                            }
-                        ],
-                        "typeConsulation":["presentiel"],
-                        "payment": ["chèque", "éspece", "Tpe"]
-                     },
-
-
-
-                     {
-                          "firstname": "EL IDRISSI",
-                          "lastname" : "Hasnae",
-                          "specialty" : "Pédiatre",
-                          "phonePro":"",
-                          "email": "",
-                          "prices":[
-                              {
-                                  "consultation":"300DH",
-                                  "video": {
-                                      "price": "100dh",
-                                      "condition": "<10min" 
-                                  }
-                              }
-                          ],
-                          "Ville":"Tanger",
-                          "address":"170, Rue De Fes  Rés. Nisrine 1Er Étage N° 2",
-                          "hours":[
-                              {
-                                  "id":"1",
-                                  "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                                  "hours": [
-                                      {
-                                          "start": "9:00",
-                                          "end" : "12:30"
-                                      },
-                                      {
-                                          "start": "14:30",
-                                          "end" : "17:30"
-                                      }
-                                  ]
-                              },
-                              {
-                                  "id":"2",
-                                  "days": ["Sam"],
-                                  "hours": [
-                                      {
-                                          "start": "10:00",
-                                          "end" : "13:00"
-                                      }
-                                  ]
-                              }
-                          ],
-                          "typeConsulation":["presentiel"],
-                          "payment": ["chèque", "éspece", "Tpe"]
-                       },
-
-
-
-                       {
-                            "firstname": "SKIREJ",
-                            "lastname" : "Fouad",
-                            "specialty" : "Dermatologue",
-                            "phonePro":"",
-                            "email": "",
-                            "prices":[
-                                {
-                                    "consultation":"300DH",
-                                    "video": {
-                                        "price": "100dh",
-                                        "condition": "<10min" 
-                                    }
-                                }
-                            ],
-                            "Ville":"Tanger",
-                            "address":"47, Rue De Mexique",
-                            "hours":[
-                                {
-                                    "id":"1",
-                                    "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                                    "hours": [
-                                        {
-                                            "start": "9:00",
-                                            "end" : "12:30"
-                                        },
-                                        {
-                                            "start": "14:30",
-                                            "end" : "17:30"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "id":"2",
-                                    "days": ["Sam"],
-                                    "hours": [
-                                        {
-                                            "start": "10:00",
-                                            "end" : "13:00"
-                                        }
-                                    ]
-                                }
-                            ],
-                            "typeConsulation":["presentiel"],
-                            "payment": ["chèque", "éspece", "Tpe"]
-                         },
-
-
-
-                         {
-                              "firstname": "BENNISS",
-                              "lastname" : "Houda",
-                              "specialty" : "Gynécologue",
-                              "phonePro":"",
-                              "email": "",
-                              "prices":[
-                                  {
-                                      "consultation":"300DH",
-                                      "video": {
-                                          "price": "100dh",
-                                          "condition": "<10min" 
-                                      }
-                                  }
-                              ],
-                              "Ville":"Tanger",
-                              "address":"6, rue Ibn Haitam B6",
-                              "hours":[
-                                  {
-                                      "id":"1",
-                                      "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                                      "hours": [
-                                          {
-                                              "start": "9:00",
-                                              "end" : "12:30"
-                                          },
-                                          {
-                                              "start": "14:30",
-                                              "end" : "17:30"
-                                          }
-                                      ]
-                                  },
-                                  {
-                                      "id":"2",
-                                      "days": ["Sam"],
-                                      "hours": [
-                                          {
-                                              "start": "10:00",
-                                              "end" : "13:00"
-                                          }
-                                      ]
-                                  }
-                              ],
-                              "typeConsulation":["presentiel"],
-                              "payment": ["chèque", "éspece", "Tpe"]
-                           },
-
-
-
-                           {
-                                "firstname": "LAHLOU",
-                                "lastname" : "Najiba",
-                                "specialty" : "Généraliste",
-                                "phonePro":"",
-                                "email": "",
-                                "prices":[
-                                    {
-                                        "consultation":"300DH",
-                                        "video": {
-                                            "price": "100dh",
-                                            "condition": "<10min" 
-                                        }
-                                    }
-                                ],
-                                "Ville":"Agadir",
-                                "address":"Av.Cheikh Saâdi Extension X",
-                                "hours":[
-                                    {
-                                        "id":"1",
-                                        "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                                        "hours": [
-                                            {
-                                                "start": "9:00",
-                                                "end" : "12:30"
-                                            },
-                                            {
-                                                "start": "14:30",
-                                                "end" : "17:30"
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "id":"2",
-                                        "days": ["Sam"],
-                                        "hours": [
-                                            {
-                                                "start": "10:00",
-                                                "end" : "13:00"
-                                            }
-                                        ]
-                                    }
-                                ],
-                                "typeConsulation":["presentiel"],
-                                "payment": ["chèque", "éspece", "Tpe"]
-                             },
-
-
-
-                             {
-                                  "firstname": "ALAOUI",
-                                  "lastname" : "MOULAY ABDELKADER",
-                                  "specialty" : "Cardiologue",
-                                  "phonePro":"",
-                                  "email": "",
-                                  "prices":[
-                                      {
-                                          "consultation":"300DH",
-                                          "video": {
-                                              "price": "100dh",
-                                              "condition": "<10min" 
-                                          }
-                                      }
-                                  ],
-                                  "Ville":"Casablanca",
-                                  "address":"2bis,Rue Abou Youssef Alkndy,(Cli.Cardio-Visculaire)",
-                                  "hours":[
-                                      {
-                                          "id":"1",
-                                          "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                                          "hours": [
-                                              {
-                                                  "start": "9:00",
-                                                  "end" : "12:30"
-                                              },
-                                              {
-                                                  "start": "14:30",
-                                                  "end" : "17:30"
-                                              }
-                                          ]
-                                      },
-                                      {
-                                          "id":"2",
-                                          "days": ["Sam"],
-                                          "hours": [
-                                              {
-                                                  "start": "10:00",
-                                                  "end" : "13:00"
-                                              }
-                                          ]
-                                      }
-                                  ],
-                                  "typeConsulation":["presentiel"],
-                                  "payment": ["chèque", "éspece", "Tpe"]
-                               },
-
-
-
-                               {
-                                    "firstname": "BOUKHIMA",
-                                    "lastname" : "Naoual",
-                                    "specialty" : "Cardiologue",
-                                    "phonePro":"",
-                                    "email": "",
-                                    "prices":[
-                                        {
-                                            "consultation":"300DH",
-                                            "video": {
-                                                "price": "100dh",
-                                                "condition": "<10min" 
-                                            }
-                                        }
-                                    ],
-                                    "Ville":"Casablanca",
-                                    "address":"Espace Erreda 52 Bd.Zerktouni",
-                                    "hours":[
-                                        {
-                                            "id":"1",
-                                            "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
-                                            "hours": [
-                                                {
-                                                    "start": "9:00",
-                                                    "end" : "12:30"
-                                                },
-                                                {
-                                                    "start": "14:30",
-                                                    "end" : "17:30"
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "id":"2",
-                                            "days": ["Sam"],
-                                            "hours": [
-                                                {
-                                                    "start": "10:00",
-                                                    "end" : "13:00"
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    "typeConsulation":["presentiel"],
-                                    "payment": ["chèque", "éspece", "Tpe"]
-                                 }
-          
-        
-        
-      
-      
-    
-  
-
-     
+    }
 ]
