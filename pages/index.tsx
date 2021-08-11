@@ -14,6 +14,7 @@ import Link from 'next/link'
 import etape1 from '../assets/etape1.svg'
 import etape2 from '../assets/etape2.svg'
 import etape3 from '../assets/etape3.svg'
+import Head from 'next/head'
 
 const etapes = [
   {
@@ -37,6 +38,10 @@ const etapes = [
 const Home: React.FC = () => {
   return (
     <div className="bg-white">
+      <Head>
+        <title>Goodoc</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="min-h-screen flex flex-col">
         <div className="absolute h-screen w-full overflow-hidden">
           <div className="absolute h-screen w-screen">
@@ -61,7 +66,7 @@ const Home: React.FC = () => {
                 Trouvez un Médecin ou un Professionnel de la Santé à proximité de chez vous !
               </h2>
             </div>
-            <div className="mt-20 w-full lg:mt-0 pt-2">
+            <div className="w-full lg:mt-0 pt-2">
               <div className="flex flex-col space-y-1 md:space-y-0 md:space-x-2 items-center md:flex-row">
                 <div className="relative rounded-md shadow-sm flex-1 w-full">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -69,20 +74,20 @@ const Home: React.FC = () => {
                   </div>
                   <input
                     type="text"
-                    name="email"
-                    id="email"
-                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 rounded-l-full h-20"
+                    name="expertise"
+                    id="expertise"
+                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 md:rounded-l-full h-20"
                     placeholder="Spécialiste, practicien..."
                   />
                 </div>
-                <div className="relative shadow-sm w-72">
+                <div className="relative shadow-sm w-full md:w-72">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <InboxIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
                   </div>
                   <input
                     type="text"
-                    name="email"
-                    id="email"
+                    name="localisation"
+                    id="localisation"
                     className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 h-20"
                     placeholder="Localisation"
                   />
@@ -90,7 +95,7 @@ const Home: React.FC = () => {
                 <Link href="/result">
                   <a
                     href="#"
-                    className="md:w-64 w-full justify-center inline-flex items-center px-6 h-20 border border-transparent shadow-sm text-base font-medium rounded-r-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    className="md:w-64 w-full justify-center inline-flex items-center px-6 h-20 border border-transparent shadow-sm text-base font-medium md:rounded-r-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   >
                     Chercher
                     <RefreshIcon className="ml-3 -mr-1 h-5 w-5" aria-hidden="true" />
@@ -112,12 +117,12 @@ const Home: React.FC = () => {
             <div className="text-center">
               <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">Comment ça marche?</h2>
               <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-                GooDoc Patient, c&apos;est un ensemble de services et d&apos;accompagnement quotidien.
+                GooDoc, c&apos;est un ensemble de services et d&apos;accompagnement quotidien.
               </p>
             </div>
             <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
               {etapes.map((post) => (
-                <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden">
+                <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden text-center bg-white">
                   <div className="flex-shrink-0">
                     <div className="h-48 w-full relative object-cover">
                       <Image

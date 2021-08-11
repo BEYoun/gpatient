@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Footer from "../components/common/Footers";
 import Header from "../components/common/Header";
 import ContactSection from "../components/ContactSection";
@@ -7,6 +8,10 @@ import { withApollo } from "../utils/withApollo";
 const Contact: React.FC = () => {
     return (
         <div className="bg-gray-100">
+            <Head>
+                <title>Nous contacter</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <div className="">
                 {/* Header */}
                 <Header theme='white' />

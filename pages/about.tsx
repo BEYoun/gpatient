@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Footer from "../components/common/Footers";
 import Header from "../components/common/Header";
 import Process from "../components/Process";
@@ -6,6 +7,10 @@ import { withApollo } from "../utils/withApollo";
 const About: React.FC = () => {
     return (
         <div className="bg-gray-100">
+            <Head>
+                <title>&Agrave; propos</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <div className="">
                 {/* Header */}
                 <Header theme='white' />
@@ -14,7 +19,7 @@ const About: React.FC = () => {
                     <div className=" px-0 sm:px-4 flex flex-col h-full">
                         <div className="max-w-2xl mb-5">
                             <h2 className="text-3xl font-extrabold sm:tracking-tight sm:text-5xl">
-                                A propos de <span className="text-primary">Goodoc P</span>
+                                &Agrave; propos de <span className="text-primary">Goodoc</span>
                             </h2>
                         </div>
                         <p className="text-xl text-gray-500 max-w-3xl">
