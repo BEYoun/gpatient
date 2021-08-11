@@ -2,11 +2,16 @@ import Header from "../components/common/Header";
 import { withApollo } from "../utils/withApollo";
 import Footer from "../components/common/Footers";
 import Link from "next/link";
+import Head from "next/head";
 
 
 const Privacy: React.FC = () => {
     return (
         <div className="bg-gray-100 min-h-screen">
+            <Head>
+                <title>privacy</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <div className="bg-primary">
                 {/* Header */}
                 <Header theme="black" />

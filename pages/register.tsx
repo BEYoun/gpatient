@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useMeQuery, useRegisterMutation } from '../graphql/generated/graphql'
 import { ISession, setSession } from '../store/ducks/session'
 import { withApollo } from '../utils/withApollo'
+import Head from 'next/head'
 
 const Register: React.FC = ({ }) => {
     // const router = useRouter()
@@ -23,6 +24,10 @@ const Register: React.FC = ({ }) => {
     // if (error) return <p>Error :(</p>
     return (
         <div>
+            <Head>
+                <title>S&apos;enregistrer</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
                     <Link href="/" passHref>

@@ -14,6 +14,7 @@ import Link from 'next/link'
 import etape1 from '../assets/etape1.svg'
 import etape2 from '../assets/etape2.svg'
 import etape3 from '../assets/etape3.svg'
+import Head from 'next/head'
 
 const etapes = [
   {
@@ -37,6 +38,10 @@ const etapes = [
 const Home: React.FC = () => {
   return (
     <div className="bg-white">
+      <Head>
+        <title>Goodoc</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className="min-h-screen flex flex-col">
         <div className="absolute h-screen w-full overflow-hidden">
           <div className="absolute h-screen w-screen">
@@ -117,7 +122,7 @@ const Home: React.FC = () => {
             </div>
             <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
               {etapes.map((post) => (
-                <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden text-center">
+                <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden text-center bg-white">
                   <div className="flex-shrink-0">
                     <div className="h-48 w-full relative object-cover">
                       <Image

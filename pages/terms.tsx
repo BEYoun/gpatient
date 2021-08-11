@@ -1,14 +1,17 @@
 import Header from "../components/common/Header";
-import { SearchIcon } from '@heroicons/react/solid'
-import ListResult from "../components/ListResult";
 import { withApollo } from "../utils/withApollo";
 import Footer from "../components/common/Footers";
 import Link from "next/link";
+import Head from "next/head";
 
 
 const Terms: React.FC = () => {
     return (
         <div className="bg-gray-100 min-h-screen">
+            <Head>
+                <title>Terms</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <div className="bg-primary">
                 {/* Header */}
                 <Header theme="black" />

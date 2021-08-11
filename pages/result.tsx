@@ -3,11 +3,16 @@ import { SearchIcon } from '@heroicons/react/solid'
 import ListResult from "../components/ListResult";
 import { withApollo } from "../utils/withApollo";
 import Footer from "../components/common/Footers";
+import Head from "next/head";
 
 
 const Result: React.FC = () => {
     return (
         <div className="bg-gray-100 min-h-screen">
+            <Head>
+                <title>Resultat</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <div className="bg-primary">
                 {/* Header */}
                 <Header theme="black" />
