@@ -9,8 +9,8 @@ const navigation = {
         { name: 'Nous contacter', href: '/contact' },
     ],
     sub: [
-        { name: 'Termes et conditions d’utilisations', href: '#' },
-        { name: 'Politique de confidentialité', href: '#' },
+        { name: 'Termes et conditions d’utilisations', href: '/terms' },
+        { name: 'Politique de confidentialité', href: '/privacy' },
     ],
     social: [
         {
@@ -61,18 +61,22 @@ const Footer = () => {
                 <nav className="-mx-5 flex flex-wrap justify-center" aria-label="Footer">
                     {navigation.main.map((item) => (
                         <div key={item.name} className="px-5 py-2">
-                            <a href={item.href} className="text-base text-white hover:text-accent">
-                                {item.name}
-                            </a>
+                            <Link href={item.href}>
+                                <a className="text-base text-white hover:text-accent">
+                                    {item.name}
+                                </a>
+                            </Link>
                         </div>
                     ))}
                 </nav>
                 <nav className="-mx-5 flex flex-wrap justify-center" aria-label="Footer">
                     {navigation.sub.map((item) => (
                         <div key={item.name} className="px-5 py-2">
-                            <a href={item.href} className="text-base text-white hover:text-accent">
-                                {item.name}
-                            </a>
+                            <Link href={item.href}>
+                                <a className="text-base text-white hover:text-accent">
+                                    {item.name}
+                                </a>
+                            </Link>
                         </div>
                     ))}
                 </nav>
