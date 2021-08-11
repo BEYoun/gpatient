@@ -69,8 +69,8 @@ const Home: React.FC = () => {
                   </div>
                   <input
                     type="text"
-                    name="email"
-                    id="email"
+                    name="expertise"
+                    id="expertise"
                     className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 md:rounded-l-full h-20"
                     placeholder="Spécialiste, practicien..."
                   />
@@ -81,8 +81,8 @@ const Home: React.FC = () => {
                   </div>
                   <input
                     type="text"
-                    name="email"
-                    id="email"
+                    name="localisation"
+                    id="localisation"
                     className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 h-20"
                     placeholder="Localisation"
                   />
