@@ -59,7 +59,7 @@ const Header: React.FC<Props> = ({ theme }) => {
                                 </Popover.Button>
                             </div>
                             <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                                <Link href='https://gdocteur.vercel.app/'>
+                                <Link href='https://doctor.goodoc.co/'>
                                     <a className={`place-self-end text-base font-medium text-opacity-70 ${theme === "black" ? "text-gray-300" : "text-black"} hover:text-white hover:text-opacity-100"`}>
                                         Êtes-vous un professionnel de la santé?
                                     </a>
