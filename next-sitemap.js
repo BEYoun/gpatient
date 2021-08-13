@@ -1,14 +1,6 @@
-const siteUrl = "http://www.goodoc.co";
+const siteUrl = "https://www.goodoc.co";
 
 module.exports = {
   siteUrl,
   generateRobotsTxt: true,
-  robotsTxtOptions: {
-    policies: [
-      { userAgent: "*", allow: "/" },
-    ],
-    additionalSitemaps: [
-      `${siteUrl}/sitemap.xml`
-    ],
-  },
 };
