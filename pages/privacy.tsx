@@ -34,7 +34,10 @@ const Privacy: React.FC = () => {
                         <ol className="list-decimal font-bold p-4">
                             <li>
                                 <h2 className="text-md text-gray-900">Objet</h2>
-                                <p className='font-thin text-gray-400'>cc</p>
+                                <p className='font-thin text-gray-400'>LA PROTECTION DES DONNEES PERSONNELLES EST UNE DES VALEURS CLE DE Goodoc ET A CE TITRE:
+ NOUS PRENONS LES MESURES NECESSAIRES A LA PROTECTION DES DONNEES PERSONNELLES QUI LUI SONT CONFIEES DANS LE CADRE DE SES SERVICES.
+La présente Politique complète et fait partie intégrante des Conditions Générales d'Utilisation du Site et de l&apos;Application disponibles ici. L&apos;utilisation du Site et/ou de l&apos;Application implique votre acceptation aux dispositions des Conditions Générales d&apos;Utilisation et à la présente Politique.
+Cette Politique peut être modifiée, complétée ou mise à jour afin notamment de se conformer à toute évolution légale, réglementaire, jurisprudentielle et technique. Nous vous invitons à consulter régulièrement cette Politique afin de vous tenir informé de la version en vigueur.</p>
                             </li>
                             <li>
                                 <h2 className="text-md text-gray-900">QUELLES SONT LES DONNEES PERSONNELLES COLLECTEES ?</h2>
