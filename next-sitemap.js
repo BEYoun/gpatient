@@ -5,13 +5,10 @@ module.exports = {
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [
-      { userAgent: "*", disallow: "/secret" },
       { userAgent: "*", allow: "/" },
     ],
     additionalSitemaps: [
-      `${siteUrl}/sitemap.xml`,
-      `${siteUrl}/server-sitemap.xml`,
+      `${siteUrl}/sitemap.xml`
     ],
   },
-  exclude: ["/secret"],
 };
