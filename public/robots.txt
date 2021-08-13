@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Disallow: /secret
+
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: http://www.goodoc.co
+
+# Sitemaps
+Sitemap: http://www.goodoc.co/sitemap.xml
+Sitemap: http://www.goodoc.co/server-sitemap.xml
