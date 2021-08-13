@@ -5,6 +5,8 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 import {
+    MeDocument,
+    MeQuery,
     useCreateUserSessionMutation,
     useMeQuery,
 } from '../graphql/generated/graphql'
@@ -14,18 +16,11 @@ import Head from 'next/head'
 
 const Login: React.FC = ({ }) => {
     const router = useRouter()
-    const dispatch = useDispatch()
     const { loading, error, data } = useMeQuery()
     const [login] = useCreateUserSessionMutation()
-    const session = useSelector(
-        (state: { session: ISession }) => state.session?.username
-    )
-    if (data?.userSession) {
-        dispatch(setSession(data?.userSession.user))
-    }
-    if (session) router.push('/')
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error :(</p>
+    if (data?.userSession?.user) router.push('/')
     return (
         <div>
             <Head>
@@ -62,10 +57,22 @@ const Login: React.FC = ({ }) => {
                             }}
                             onSubmit={async (values, { setSubmitting }) => {
                                 console.log('ff')
-                                await login({ variables: values })
+                                await login({
+                                    variables: values,
+                                    update: (cache, { data }) => {
+                                        cache.writeQuery<MeQuery>({
+                                            query: MeDocument,
+                                            data: {
+                                                __typename: "Query",
+                                                userSession: data?.createUserSession,
+                                            },
+                                        });
+                                    },
+                                })
                                     .then(({ data }) => {
                                         if (data?.createUserSession.user.username)
-                                            dispatch(setSession(data?.createUserSession.user))
+                                            router.push('/')
+
                                     })
                                     .catch((errors: GraphQLError) => {
                                         console.log(`errors`, errors.message)

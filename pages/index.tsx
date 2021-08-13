@@ -154,4 +154,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default withApollo({ ssr: false })(Home);
+export default withApollo({ ssr: true })(Home);

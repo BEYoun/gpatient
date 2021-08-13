@@ -1,4 +1,4 @@
-import { createWithApollo } from "./createWithApollo";
+import { withApollo as createWithApollo } from "next-apollo";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { NextPageContext } from "next";
 

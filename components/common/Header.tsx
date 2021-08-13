@@ -2,16 +2,15 @@ import { Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
+import { useApolloClient } from "@apollo/client";
 import {
-    ChartBarIcon,
     MenuIcon,
     XIcon,
     LoginIcon
 } from '@heroicons/react/outline'
+
 import profilePic from '../../assets/logo.svg'
 import { useLogoutMutation, useMeQuery } from '../../graphql/generated/graphql'
-import { useDispatch } from 'react-redux'
-import { clearSession } from '../../store/ducks/session'
 
 const solutions = [
     {
@@ -28,9 +27,8 @@ type Props = {
 
 const Header: React.FC<Props> = ({ theme }) => {
     const { data } = useMeQuery()
-    // console.log(`data`, data)
-    const dispatch = useDispatch()
     const [logout] = useLogoutMutation()
+    const apolloClient = useApolloClient();
     return (
         <Popover className="relative">
             {({ open }) => (
@@ -77,8 +75,8 @@ const Header: React.FC<Props> = ({ theme }) => {
                             </div> : <button
                                 className={`whitespace-nowrap ${theme === "black" ? "bg-white" : "bg-accent"} border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600" : "text-black"}  hover:bg-indigo-50`}
                                 onClick={async () => {
-                                    logout()
-                                    dispatch(clearSession())
+                                    await logout()
+                                    await apolloClient.resetStore();
                                 }}
                             >
                                 Logout
