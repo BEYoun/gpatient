@@ -41,7 +41,18 @@ Cette Politique peut être modifiée, complétée ou mise à jour afin notamment
                             </li>
                             <li>
                                 <h2 className="text-md text-gray-900">QUELLES SONT LES DONNEES PERSONNELLES COLLECTEES ?</h2>
-                                <p className='font-thin text-gray-400'>cc</p>
+                                <p className='font-thin text-gray-400'>Les Données Personnelles susceptibles d'être collectées par Goodoc sont notamment les suivantes :
+• Vos nom et prénom
+• Votre adresse e-mail
+• Votre numéro de téléphone fixe, mobile,
+• Votre date de naissance,
+• Votre sexe
+• Votre mot de passe
+• Vos données de connexion et d'utilisation du Site/Application
+• Votre adresse IP, matériel informatique utilisé par l'Utilisateur
+Cette liste non-exhaustives est susceptible d’évoluer et d’inclure de nouveaux élément en vue des prochaines mse à jours prévues
+Goodoc peut egalement inclure des enquêtes facultatives, Afin de recueillir votre opinion sur votre expérience sur notre Site/Application, l'utilisation de notre Service, ou votre opinion sur les Professionnels de Sante que vous avez consultés.
+</p>
                             </li>
                             <li>
                                 <h2 className="text-md text-gray-900">POURQUOI CES DONNEES SONT-ELLES COLLECTEES?
