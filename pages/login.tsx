@@ -1,6 +1,5 @@
 import { Formik } from 'formik'
 import { GraphQLError } from 'graphql'
-import { useDispatch, useSelector } from 'react-redux'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
@@ -10,7 +9,6 @@ import {
     useCreateUserSessionMutation,
     useMeQuery,
 } from '../graphql/generated/graphql'
-import { ISession, setSession } from '../store/ducks/session'
 import { withApollo } from '../utils/withApollo'
 import Head from 'next/head'
 

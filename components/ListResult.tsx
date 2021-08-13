@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import doctorsApi, { Data } from '../pages/api/doctorsApi';
+import doctorsApi, { Data } from './api/doctorsApi';
 import CardDocResult from './CardDocResult';
 
 const ListResult = () => {
