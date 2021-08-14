@@ -46,6 +46,7 @@
 
     },
 
+
     {
         "firstname": "KADA ZAIR",
         "lastname" : " Jamal",
@@ -138,5 +139,1297 @@
         "typeConsulation":["presentiel"],
         "payment": ["chèque", "éspece", "Tpe"]
 
+    },
+
+
+    {
+        "firstname": "ELWAFA",
+        "lastname" : "Fatima",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-44-45-70",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"70 boulevard libourne quartier gironde Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "13:30",
+                        "end" : "17:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+    
+    {
+        "firstname": "ZAIDANI",
+        "lastname" : "Asmaa",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-89-07-70",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"2°ét، Lotiss. Moulay Thami, bd HH 24 n°25، Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "13:30",
+                        "end" : "16"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+    {
+        "firstname": "ZRIKEM",
+        "lastname" : "Karima",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-29-31-60",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"68 Rue de Zerhoun, Casablanca 20100",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "13:30",
+                        "end" : "16"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+    
+    {
+        "firstname": "ZIZI",
+        "lastname" : "Abdlelali",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-27-52-54",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"Docteur Zizi Abdelali, Rue Omar Slaoui, Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "13:30",
+                        "end" : "16"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+    {
+        "firstname": "ZITOUNI",
+        "lastname" : "Aicha",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-35-23-26",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"Dr Zitouni aicha pédiatre, Boulevard Mouahidin،, Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "13:30",
+                        "end" : "16"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+    {
+        "firstname": "ZAKIR",
+        "lastname" : "Abdlhak",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-48-67-66",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"Professeur ZAKIR, Pédiatre, Casablanca 20250",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+    {
+        "firstname": "ZAHOUANI",
+        "lastname" : "Abdlhak",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-91-43-33",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"angle route d'azzemoure et bd Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "ZAGHLOUL",
+        "lastname" : "Jamaleddine",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-20-06-52",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"19 boulevard bordeaux quartier ouest Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+    {
+        "firstname": "TAZI",
+        "lastname" : "Youssef",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-55-04-36",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"162 boulevard reda gdira ex nil cité djemaa Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "TAZI",
+        "lastname" : "Najib",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-23-08-05",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"202 boulevard abdelmoumen 2 et apt 3 Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+    {
+        "firstname": "TAZI",
+        "lastname" : "Mustapha",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-20-48-84",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":" 201 rue mustapha el maani quartier liberté Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "TAZI",
+        "lastname" : "Laila",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-36-35-54",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":" 45 boulevard ghandi hay maarif extension chantimar Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "TAZI",
+        "lastname" : "Khalid",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-25-83-82",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"res ribh a boulevard bir anzarane quartier maarif extension Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "TAMIM",
+        "lastname" : "Amina",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-86-03-16",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":" 182 boulevard anoual quartier des hopitaux Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "TADRATI",
+        "lastname" : "Mbarka",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-99-23-45",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":" 17 19 rue nassih eddine quartier maarif extension Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "Souhayl",
+        "lastname" : "Hassan",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-23-40-06",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":" boulevard abdelmoumen anoual 1 et a Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "SMINA",
+        "lastname" : "Najat",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-58-10-07",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":" 8 CASABLANCA. Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "ABDLMOUNIM",
+        "lastname" : "Ahmed",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-91-05-54",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":" Oued Tensift (en face du marche el oulfa) El oulfa Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "JAMAI",
+        "lastname" : "Omar",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-99-44-99",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"  340 boulevard brahim roudani quartier maarif Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "FENNICH",
+        "lastname" : "Abdlilah",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-45-19-89",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":" 9 boulevard liberté quartier alsace lorraine Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "CHOUAIB",
+        "lastname" : "Jaouad",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-94-53-35",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"235 boulevard yacoub el mansour hay erraha (beausejour) Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "KHAIROUNI",
+        "lastname" : "Abdeslam",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-25-50-56",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"34 rue charam cheikh les palmiers Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "MEKOUAR",
+        "lastname" : "Rochdi azouagh",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-29-89-44",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"8 rue naceiria quartier ancienne medina Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+    
+{
+        "firstname": "DHAIBI",
+        "lastname" : "Chadia",
+        "specialty" : "pédiatre",
+        "phonePro":"05 22 56 47 32",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"18, Bd Commandant Driss El Harty (Angle du Bd Driss El Harty et Bd Mohamed VI )Jamila 3 Etg 2 Quartier Sebata Casablanca",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "BICHRI",
+        "lastname" : "Salma",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-60-60-81",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"Rue Du Sergent Azdam Driss, Ain Borja Casablanca 20250, Résidence les jardins de Belvédère , Ain borja,derrière le centre commercial tachfine Center , Casablanca, 20320, Maroc",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "CHAMI",
+        "lastname" : "Rachida",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-99-63-63",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"340 Espace Maarif Angle Bd.Brahim Roudani Et Rue Abou Ishak Al Marouni; Anfa, 4ème Etage N°10, , Maarif,En face du complexe Jamai, Casablanca, 20000, Maroc",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "8:30",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:30"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
+    },
+
+
+    {
+        "firstname": "AITLDIR",
+        "lastname" : "Khadija",
+        "specialty" : "pédiatre",
+        "phonePro":"0522-55-61-34",
+        "email": "",
+        "prices":[
+            {
+                "consultation":"300DH",
+                "video": {
+                    "price": "100dh",
+                    "condition": "<10min" 
+                }
+            }
+        ],
+        "address":"1er étage، Dar Touzani، 1133 Bd Mohammed VI, Casablanca 20450",
+        "hours":[
+            {
+                "id":"1",
+                "days": ["Lun", "Mar", "Mer", "Jeu", "Ven"],
+                "hours": [
+                    {
+                        "start": "9:00",
+                        "end" : "12:30"
+                    },
+                    {
+                        "start": "12:30",
+                        "end" : "16:00"
+                    }
+                ]
+            },
+            {
+                "id":"2",
+                "days": ["Sa"],
+                "hours": [
+                    {
+                        "start": "8:00",
+                        "end" : "13"
+                    }
+                ]
+            }
+        ],
+        "typeConsulation":["presentiel"],
+        "payment": ["chèque", "éspece", "Tpe"]
+
     }
+
+
 ]
