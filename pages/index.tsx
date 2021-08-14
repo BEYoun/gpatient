@@ -7,7 +7,6 @@ import {
 } from '@heroicons/react/outline'
 import { withApollo } from '../utils/withApollo'
 
-import backgroundHero from '../assets/hero.jpg'
 import Footer from '../components/common/Footers'
 import Header from '../components/common/Header'
 import Link from 'next/link'
@@ -43,20 +42,12 @@ const Home: React.FC = () => {
         <title>Goodoc</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="min-h-screen flex flex-col">
-        <div className="absolute h-screen w-full overflow-hidden">
-          <div className="absolute h-screen w-screen">
-            <Image
-              alt="Mountains"
-              src={backgroundHero}
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-              className="filter blur-sm backdrop-opacity-80"
-            />
-          </div>
-          <div className="absolute w-screen h-screen bg-opacity-40 bg-black " />
-        </div>
+      <div
+        className="min-h-screen flex flex-col bg-cover bg-top sm:bg-top"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/hero.jpg)`,
+        }}
+      >
         {/* Header */}
         <Header theme='black' />
         {/* Header section with select menu */}
