@@ -7,7 +7,6 @@ import {
 } from '@heroicons/react/outline'
 import { withApollo } from '../utils/withApollo'
 
-import backgroundHero from '../assets/hero.jpg'
 import Footer from '../components/common/Footers'
 import Header from '../components/common/Header'
 import Link from 'next/link'
@@ -15,6 +14,7 @@ import etape1 from '../assets/etape1.svg'
 import etape2 from '../assets/etape2.svg'
 import etape3 from '../assets/etape3.svg'
 import Head from 'next/head'
+import Hero from '../components/Sections/Hero'
 
 const etapes = [
   {
@@ -42,69 +42,16 @@ const Home: React.FC = () => {
         <title>Goodoc</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="min-h-screen flex flex-col">
-        <div className="absolute h-screen w-full overflow-hidden">
-          <div className="absolute h-screen w-screen">
-            <Image
-              alt="Mountains"
-              src={backgroundHero}
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-              className="filter blur-sm backdrop-opacity-80"
-            />
-          </div>
-          <div className="absolute w-screen h-screen bg-opacity-40 bg-black " />
-        </div>
+      <div
+        className="min-h-screen flex flex-col bg-cover bg-top sm:bg-top"
+        style={{
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(/hero.jpg)`,
+        }}
+      >
         {/* Header */}
         <Header theme='black' />
         {/* Header section with select menu */}
-        <div className="flex-1 flex relative max-w-2xl py-16 px-4 sm:py-32 sm:px-6 lg:px-8 lg:max-w-7xl mx-auto w-full">
-          <div className=" flex-1 px-0 sm:px-4 flex flex-col h-full">
-            <div className="max-w-3xl pb-24">
-              <h2 className="text-3xl font-bold text-white sm:tracking-tight sm:text-6xl md:text-7xl leading-8">
-                Trouvez un Médecin ou un Professionnel de la Santé à proximité de chez vous !
-              </h2>
-            </div>
-            <div className="w-full lg:mt-0 pt-2">
-              <div className="flex flex-col space-y-1 md:space-y-0 md:space-x-2 items-center md:flex-row">
-                <div className="relative rounded-md shadow-sm flex-1 w-full">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <SearchIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                  </div>
-                  <input
-                    type="text"
-                    name="expertise"
-                    id="expertise"
-                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 md:rounded-l-full h-20"
-                    placeholder="Spécialiste, practicien..."
-                  />
-                </div>
-                <div className="relative shadow-sm w-full md:w-72">
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <InboxIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                  </div>
-                  <input
-                    type="text"
-                    name="localisation"
-                    id="localisation"
-                    className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 h-20"
-                    placeholder="Localisation"
-                  />
-                </div>
-                <Link href="/result">
-                  <a
-                    href="#"
-                    className="md:w-64 w-full justify-center inline-flex items-center px-6 h-20 border border-transparent shadow-sm text-base font-medium md:rounded-r-full text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    Chercher
-                    <RefreshIcon className="ml-3 -mr-1 h-5 w-5" aria-hidden="true" />
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Hero />
       </div>
 
       <div className="bg-gray-50">
