@@ -56,13 +56,14 @@ export default function CitySelect({ allowCreate = false, ...restProps }: Props)
             onItemSelect={handleItemSelect}
             items={items}
             {...restProps}
+            className="w-full"
         >
             <Button
                 icon="locate"
                 rightIcon="caret-down"
                 text={film ? `${film.city} (${film.city})` : "(No selection)"}
                 disabled={restProps.disabled}
-                className="h-20 md:w-72"
+                className="h-20 md:w-72 w-full"
             />
         </FilmSelect>
     );
