@@ -4,6 +4,8 @@ import ListResult from "../components/ListResult";
 import { withApollo } from "../utils/withApollo";
 import Footer from "../components/common/Footers";
 import Head from "next/head";
+import CitySelect from "../components/Sections/components/citySelect";
+import ExpertiseSelect from "../components/Sections/components/selectSpecialite/expertiseSelect";
 
 
 const Result: React.FC = () => {
@@ -21,41 +23,18 @@ const Result: React.FC = () => {
                     <div className="lg:flex lg:justify-between lg:items-center space-y-2 lg:space-y-0 border-b border-white border-opacity-60 pb-8">
                         <div className="flex-1 flex justify-center lg:justify-end">
                             <div className="w-full px-2 lg:px-6">
-                                <label htmlFor="search" className="sr-only">
-                                    Search projects
-                                </label>
-                                <div className="relative text-indigo-200 focus-within:text-gray-400">
-                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                        <SearchIcon className="h-5 w-5" aria-hidden="true" />
-                                    </div>
-                                    <input
-                                        id="search"
-                                        name="search"
-                                        className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-indigo-400 bg-opacity-25 text-indigo-100 placeholder-indigo-200 focus:outline-none focus:bg-white focus:ring-0 focus:placeholder-gray-400 focus:text-gray-900 sm:text-sm"
-                                        placeholder="Médecin, Etablissement, Spécialité..."
-                                        type="search"
-                                    />
-                                </div>
+                                <ExpertiseSelect
+                                    className="block w-full border border-transparent rounded-md leading-5 bg-indigo-400 bg-opacity-25 text-indigo-100 placeholder-indigo-200 focus:outline-none focus:bg-white focus:ring-0 focus:placeholder-gray-400 focus:text-gray-900 sm:text-sm"
+                                />
                             </div>
                         </div>
                         <div className="flex justify-center lg:justify-end">
                             <div className="w-full px-2 lg:px-6">
-                                <label htmlFor="search" className="sr-only">
-                                    Où ?
-                                </label>
-                                <div className="relative text-indigo-200 focus-within:text-gray-400">
-                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                        <SearchIcon className="h-5 w-5" aria-hidden="true" />
-                                    </div>
-                                    <input
-                                        id="search"
-                                        name="search"
-                                        className="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 bg-indigo-400 bg-opacity-25 text-indigo-100 placeholder-indigo-200 focus:outline-none focus:bg-white focus:ring-0 focus:placeholder-gray-400 focus:text-gray-900 sm:text-sm"
-                                        placeholder="Où ?"
-                                        type="search"
-                                    />
-                                </div>
+                                <CitySelect
+                                    className="block w-full border border-transparent rounded-md leading-5 bg-indigo-400 bg-opacity-25 text-indigo-100 placeholder-indigo-200 focus:outline-none focus:bg-white focus:ring-0 focus:placeholder-gray-400 focus:text-gray-900 sm:text-sm"
+                                />
                             </div>
+
                         </div>
                         <div className="flex md:items-center justify-end">
                             <span className="inline-flex rounded-md shadow">
@@ -64,7 +43,7 @@ const Result: React.FC = () => {
                                     className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-black bg-accent hover:bg-accent-deep"
                                 >
                                     Rechercher
-                            </a>
+                                </a>
                             </span>
                         </div>
                     </div>

@@ -6,14 +6,14 @@ import { SelectProps, Suggest } from "@blueprintjs/select";
 import {
     areFilmsEqual,
     filmSelectProps,
-    IFilm,
-    CITIES,
-} from "./cities";
+    IExperty,
+    EXPERTIES,
+} from "./experties";
 
-const CitySelectInput = Suggest.ofType<IFilm>();
+const ExpertiseSelectInput = Suggest.ofType<IExperty>();
 
 type Props = Omit<
-    SelectProps<IFilm>,
+    SelectProps<IExperty>,
     | "createNewItemFromQuery"
     | "createNewItemRenderer"
     | "items"
@@ -25,16 +25,16 @@ type Props = Omit<
     allowCreate?: boolean;
 };
 
-export default function CitySelect({ allowCreate = false, ...restProps }: Props) {
-    const renderInputValue = (film: IFilm) => film.city;
+export default function ExpertiseSelect({ allowCreate = false, ...restProps }: Props) {
+    const renderInputValue = (film: IExperty) => film.experty;
     const [items, setItems] = useState(filmSelectProps.items);
-    const [film, setFilm] = useState(CITIES[0]);
-    const handleItemSelect = useCallback((newFilm: IFilm) => {
+    const [film, setFilm] = useState(EXPERTIES[0]);
+    const handleItemSelect = useCallback((newFilm: IExperty) => {
         setFilm(newFilm);
     }, []);
 
     return (
-        <CitySelectInput
+        <ExpertiseSelectInput
             {...filmSelectProps}
             itemsEqual={areFilmsEqual}
             noResults={<MenuItem disabled={true} text="No results." />}
@@ -42,7 +42,6 @@ export default function CitySelect({ allowCreate = false, ...restProps }: Props)
             items={items}
             {...restProps}
             inputValueRenderer={renderInputValue}
-            defaultSelectedItem={film}
         />
     );
 }

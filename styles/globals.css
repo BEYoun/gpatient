@@ -5,7 +5,13 @@
 @import "~@blueprintjs/icons/lib/css/blueprint-icons.css";
 
 .bp3-popover-target {
-  @apply w-full;
+  @apply h-full w-full;
+}
+.bp3-input-group {
+  @apply h-full;
+}
+.bp3-input {
+  @apply h-full;
 }
 
 @tailwind components;

@@ -3,6 +3,7 @@ import Link from "next/link"
 import React from "react"
 import { MenuItem } from "@blueprintjs/core";
 import CitySelect from "./components/citySelect";
+import ExpertiseSelect from "./components/selectSpecialite/expertiseSelect";
 
 
 const Hero: React.FC = ({ }) => {
@@ -20,18 +21,11 @@ const Hero: React.FC = ({ }) => {
                 <div className="w-full lg:mt-0 pt-2">
                     <div className="flex flex-col space-y-1 md:space-y-0 md:space-x-2 items-center md:flex-row">
                         <div className="relative rounded-md shadow-sm flex-1 w-full">
-                            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                <SearchIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-                            </div>
-                            <input
-                                type="text"
-                                name="expertise"
-                                id="expertise"
-                                className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 md:rounded-l-full h-20"
-                                placeholder="Spécialiste, practicien..."
+                            <ExpertiseSelect
+                                className="focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 md:rounded-l-full h-20"
                             />
                         </div>
-                        <div className="relative shadow-sm w-full md:w-72">
+                        <div className="relative shadow-sm w-full md:w-72 h-20">
                             {/* <input
                                 type="text"
                                 name="localisation"
@@ -40,10 +34,6 @@ const Hero: React.FC = ({ }) => {
                                 placeholder="Localisation"
                             /> */}
                             <CitySelect
-                                allowCreate={false}
-                                createNewItemPosition={"first"}
-                                initialContent={initialContent}
-                                popoverProps={{ minimal: false }}
                                 className="focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 h-20"
                             />
                         </div>

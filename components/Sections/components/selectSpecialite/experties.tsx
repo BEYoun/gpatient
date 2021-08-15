@@ -3,31 +3,30 @@ import * as React from "react";
 import { MenuItem } from "@blueprintjs/core";
 import { ItemPredicate, ItemRenderer } from "@blueprintjs/select";
 
-export interface IFilm {
+export interface IExperty {
     /** Title of film. */
-    city: string;
+    experty: string;
     /** IMDb ranking. */
     rank: number;
 }
 
 /** Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top */
-export const CITIES: IFilm[] = [
-    { city: "Casablanca" },
-    { city: "Rabat" },
-    { city: "Agadir" },
-    { city: "Marrakech" },
+export const EXPERTIES: IExperty[] = [
+    { experty: "specialiste" },
+    { experty: "generaliste" },
+    { experty: "ophtalmologue" },
 ].map((m, index) => ({ ...m, rank: index + 1 }));
 
-export const renderFilm: ItemRenderer<IFilm> = (film, { handleClick, modifiers, query }) => {
+export const renderFilm: ItemRenderer<IExperty> = (film, { handleClick, modifiers, query }) => {
     if (!modifiers.matchesPredicate) {
         return null;
     }
-    const text = `${film.rank}. ${film.city}`;
+    const text = `${film.rank}. ${film.experty}`;
     return (
         <MenuItem
             active={modifiers.active}
             disabled={modifiers.disabled}
-            label={film.city}
+            label={film.experty}
             key={film.rank}
             onClick={handleClick}
             text={highlightText(text, query)}
@@ -49,14 +48,14 @@ export const renderCreateFilmOption = (
     />
 );
 
-export const filterFilm: ItemPredicate<IFilm> = (query, film, _index, exactMatch) => {
-    const normalizedTitle = film.city.toLowerCase();
+export const filterFilm: ItemPredicate<IExperty> = (query, film, _index, exactMatch) => {
+    const normalizedTitle = film.experty.toLowerCase();
     const normalizedQuery = query.toLowerCase();
 
     if (exactMatch) {
         return normalizedTitle === normalizedQuery;
     } else {
-        return `${film.rank}. ${normalizedTitle} ${film.city}`.indexOf(normalizedQuery) >= 0;
+        return `${film.rank}. ${normalizedTitle} ${film.experty}`.indexOf(normalizedQuery) >= 0;
     }
 };
 
@@ -98,42 +97,42 @@ function escapeRegExpChars(text: string) {
 export const filmSelectProps = {
     itemPredicate: filterFilm,
     itemRenderer: renderFilm,
-    items: CITIES,
+    items: EXPERTIES,
 };
 
-export function createFilm(city: string): IFilm {
+export function createFilm(experty: string): IExperty {
     return {
         rank: 100 + Math.floor(Math.random() * 100 + 1),
-        city
+        experty
     };
 }
 
-export function areFilmsEqual(filmA: IFilm, filmB: IFilm) {
-    // Compare only the titles (ignoring case) just for simplicity.
-    return filmA.city.toLowerCase() === filmB.city.toLowerCase();
+export function areFilmsEqual(filmA: IExperty, filmB: IExperty) {
+    // Compare only the titles (ignoring case) just for simpliexperty.
+    return filmA.experty.toLowerCase() === filmB.experty.toLowerCase();
 }
 
-export function doesFilmEqualQuery(film: IFilm, query: string) {
-    return film.city.toLowerCase() === query.toLowerCase();
+export function doesFilmEqualQuery(film: IExperty, query: string) {
+    return film.experty.toLowerCase() === query.toLowerCase();
 }
 
-export function arrayContainsFilm(films: IFilm[], filmToFind: IFilm): boolean {
-    return films.some((film: IFilm) => film.city === filmToFind.city);
+export function arrayContainsFilm(films: IExperty[], filmToFind: IExperty): boolean {
+    return films.some((film: IExperty) => film.experty === filmToFind.experty);
 }
 
-export function addFilmToArray(films: IFilm[], filmToAdd: IFilm) {
+export function addFilmToArray(films: IExperty[], filmToAdd: IExperty) {
     return [...films, filmToAdd];
 }
 
-export function deleteFilmFromArray(films: IFilm[], filmToDelete: IFilm) {
+export function deleteFilmFromArray(films: IExperty[], filmToDelete: IExperty) {
     return films.filter(film => film !== filmToDelete);
 }
 
 export function maybeAddCreatedFilmToArrays(
-    items: IFilm[],
-    createdItems: IFilm[],
-    film: IFilm,
-): { createdItems: IFilm[]; items: IFilm[] } {
+    items: IExperty[],
+    createdItems: IExperty[],
+    film: IExperty,
+): { createdItems: IExperty[]; items: IExperty[] } {
     const isNewlyCreatedItem = !arrayContainsFilm(items, film);
     return {
         createdItems: isNewlyCreatedItem ? addFilmToArray(createdItems, film) : createdItems,
@@ -143,10 +142,10 @@ export function maybeAddCreatedFilmToArrays(
 }
 
 export function maybeDeleteCreatedFilmFromArrays(
-    items: IFilm[],
-    createdItems: IFilm[],
-    film: IFilm,
-): { createdItems: IFilm[]; items: IFilm[] } {
+    items: IExperty[],
+    createdItems: IExperty[],
+    film: IExperty,
+): { createdItems: IExperty[]; items: IExperty[] } {
     const wasItemCreatedByUser = arrayContainsFilm(createdItems, film);
 
     // Delete the item if the user manually created it.
