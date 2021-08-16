@@ -3,7 +3,7 @@ import * as React from "react";
 import { MenuItem } from "@blueprintjs/core";
 import { ItemPredicate, ItemRenderer } from "@blueprintjs/select";
 
-export interface IFilm {
+export interface ICity {
     /** Title of film. */
     city: string;
     /** IMDb ranking. */
@@ -11,14 +11,14 @@ export interface IFilm {
 }
 
 /** Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top */
-export const CITIES: IFilm[] = [
+export const CITIES: ICity[] = [
     { city: "Casablanca" },
     { city: "Rabat" },
     { city: "Agadir" },
     { city: "Marrakech" },
 ].map((m, index) => ({ ...m, rank: index + 1 }));
 
-export const renderFilm: ItemRenderer<IFilm> = (film, { handleClick, modifiers, query }) => {
+export const renderFilm: ItemRenderer<ICity> = (film, { handleClick, modifiers, query }) => {
     if (!modifiers.matchesPredicate) {
         return null;
     }
@@ -35,21 +35,8 @@ export const renderFilm: ItemRenderer<IFilm> = (film, { handleClick, modifiers, 
     );
 };
 
-export const renderCreateFilmOption = (
-    query: string,
-    active: boolean,
-    handleClick: React.MouseEventHandler<HTMLElement>,
-) => (
-    <MenuItem
-        icon="add"
-        text={`Create "${query}"`}
-        active={active}
-        onClick={handleClick}
-        shouldDismissPopover={false}
-    />
-);
 
-export const filterFilm: ItemPredicate<IFilm> = (query, film, _index, exactMatch) => {
+export const filterFilm: ItemPredicate<ICity> = (query, film, _index, exactMatch) => {
     const normalizedTitle = film.city.toLowerCase();
     const normalizedQuery = query.toLowerCase();
 
@@ -101,57 +88,9 @@ export const filmSelectProps = {
     items: CITIES,
 };
 
-export function createFilm(city: string): IFilm {
-    return {
-        rank: 100 + Math.floor(Math.random() * 100 + 1),
-        city
-    };
-}
 
-export function areFilmsEqual(filmA: IFilm, filmB: IFilm) {
+export function areCitiesEqual(filmA: ICity, filmB: ICity) {
     // Compare only the titles (ignoring case) just for simplicity.
     return filmA.city.toLowerCase() === filmB.city.toLowerCase();
 }
 
-export function doesFilmEqualQuery(film: IFilm, query: string) {
-    return film.city.toLowerCase() === query.toLowerCase();
-}
-
-export function arrayContainsFilm(films: IFilm[], filmToFind: IFilm): boolean {
-    return films.some((film: IFilm) => film.city === filmToFind.city);
-}
-
-export function addFilmToArray(films: IFilm[], filmToAdd: IFilm) {
-    return [...films, filmToAdd];
-}
-
-export function deleteFilmFromArray(films: IFilm[], filmToDelete: IFilm) {
-    return films.filter(film => film !== filmToDelete);
-}
-
-export function maybeAddCreatedFilmToArrays(
-    items: IFilm[],
-    createdItems: IFilm[],
-    film: IFilm,
-): { createdItems: IFilm[]; items: IFilm[] } {
-    const isNewlyCreatedItem = !arrayContainsFilm(items, film);
-    return {
-        createdItems: isNewlyCreatedItem ? addFilmToArray(createdItems, film) : createdItems,
-        // Add a created film to `items` so that the film can be deselected.
-        items: isNewlyCreatedItem ? addFilmToArray(items, film) : items,
-    };
-}
-
-export function maybeDeleteCreatedFilmFromArrays(
-    items: IFilm[],
-    createdItems: IFilm[],
-    film: IFilm,
-): { createdItems: IFilm[]; items: IFilm[] } {
-    const wasItemCreatedByUser = arrayContainsFilm(createdItems, film);
-
-    // Delete the item if the user manually created it.
-    return {
-        createdItems: wasItemCreatedByUser ? deleteFilmFromArray(createdItems, film) : createdItems,
-        items: wasItemCreatedByUser ? deleteFilmFromArray(items, film) : items,
-    };
-}

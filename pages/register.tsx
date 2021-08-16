@@ -1,27 +1,12 @@
 import { Form, Formik } from 'formik'
-import { useDispatch, useSelector } from 'react-redux'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 
-import { useMeQuery, useRegisterMutation } from '../graphql/generated/graphql'
-import { ISession, setSession } from '../store/ducks/session'
+import { useRegisterMutation } from '../graphql/generated/graphql'
 import { withApollo } from '../utils/withApollo'
 import Head from 'next/head'
 
 const Register: React.FC = ({ }) => {
-    // const router = useRouter()
-    // const dispatch = useDispatch()
-    // const { loading, error, data } = useMeQuery()
     const [login] = useRegisterMutation()
-    // const session = useSelector(
-    //     (state: { session: ISession }) => state.session?.username
-    // )
-    // if (data?.userSession) {
-    //     dispatch(setSession(data?.userSession.user))
-    // }
-    // if (session) router.push('/')
-    // if (loading) return <p>Loading...</p>
-    // if (error) return <p>Error :(</p>
     return (
         <div>
             <Head>

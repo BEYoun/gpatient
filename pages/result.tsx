@@ -5,7 +5,7 @@ import { withApollo } from "../utils/withApollo";
 import Footer from "../components/common/Footers";
 import Head from "next/head";
 import CitySelect from "../components/Sections/components/citySelect";
-import ExpertiseSelect from "../components/Sections/components/selectSpecialite/expertiseSelect";
+import ExpertiseSelect from "../components/Sections/components/SpecialitySelect/specialitySelect";
 
 
 const Result: React.FC = () => {

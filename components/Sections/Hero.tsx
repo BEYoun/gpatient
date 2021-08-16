@@ -1,15 +1,11 @@
 import { SearchIcon, RefreshIcon, LocationMarkerIcon } from "@heroicons/react/solid"
 import Link from "next/link"
 import React from "react"
-import { MenuItem } from "@blueprintjs/core";
 import CitySelect from "./components/citySelect";
-import ExpertiseSelect from "./components/selectSpecialite/expertiseSelect";
+import SpecialitySelect from "./components/SpecialitySelect";
 
 
 const Hero: React.FC = ({ }) => {
-    const initialContent = (
-        <MenuItem disabled={true} text={`Chercher votre ville.`} />
-    );
     return (
         <div className="flex-1 flex relative max-w-2xl py-16 px-4 sm:py-32 sm:px-6 lg:px-8 lg:max-w-7xl mx-auto w-full">
             <div className=" flex-1 px-0 sm:px-4 flex flex-col h-full">
@@ -21,20 +17,19 @@ const Hero: React.FC = ({ }) => {
                 <div className="w-full lg:mt-0 pt-2">
                     <div className="flex flex-col space-y-1 md:space-y-0 md:space-x-2 items-center md:flex-row">
                         <div className="relative rounded-md shadow-sm flex-1 w-full">
-                            <ExpertiseSelect
+                            <SpecialitySelect
                                 className="focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 md:rounded-l-full h-20"
+                                tagInputProps={{
+                                    className: 'md:rounded-l-full h-20'
+                                }}
                             />
                         </div>
-                        <div className="relative shadow-sm w-full md:w-72 h-20">
-                            {/* <input
-                                type="text"
-                                name="localisation"
-                                id="localisation"
-                                className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-10 sm:text-sm border-gray-300 h-20"
-                                placeholder="Localisation"
-                            /> */}
+                        <div className="relative shadow-sm w-full lg:w-72 h-20">
                             <CitySelect
                                 className="focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 h-20"
+                                tagInputProps={{
+                                    className: 'h-20'
+                                }}
                             />
                         </div>
                         <Link href="/result">
