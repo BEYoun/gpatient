@@ -1,0 +1,10 @@
+query GetDoctors {
+  getDoctors {
+    id
+    lastName
+    firstName
+    adresse
+    numberPhone
+    speciality
+  }
+}

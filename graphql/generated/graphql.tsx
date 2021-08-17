@@ -32,6 +32,16 @@ export enum CacheControlScope {
 }
 
 
+export type DoctorDb = {
+  __typename?: 'DoctorDb';
+  id: Scalars['String'];
+  lastName: Scalars['String'];
+  firstName: Scalars['String'];
+  adresse: Scalars['String'];
+  numberPhone: Scalars['String'];
+  speciality: Scalars['String'];
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   createUser: User;
@@ -120,6 +130,7 @@ export type Query = {
   userSession?: Maybe<UserSession>;
   allCabinet?: Maybe<Array<Maybe<Cabinet>>>;
   getCabinetById?: Maybe<Cabinet>;
+  getDoctors?: Maybe<Array<Maybe<DoctorDb>>>;
   getAllPatients?: Maybe<Array<Maybe<Patient>>>;
   getPatientById: Patient;
 };
@@ -191,6 +202,17 @@ export type RegisterMutation = (
     { __typename?: 'User' }
     & Pick<User, 'username' | 'role'>
   ) }
+);
+
+export type GetDoctorsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetDoctorsQuery = (
+  { __typename?: 'Query' }
+  & { getDoctors?: Maybe<Array<Maybe<(
+    { __typename?: 'DoctorDb' }
+    & Pick<DoctorDb, 'id' | 'lastName' | 'firstName' | 'adresse' | 'numberPhone' | 'speciality'>
+  )>>> }
 );
 
 export type MeQueryVariables = Exact<{ [key: string]: never; }>;
@@ -312,6 +334,45 @@ export function useRegisterMutation(baseOptions?: Apollo.MutationHookOptions<Reg
 export type RegisterMutationHookResult = ReturnType<typeof useRegisterMutation>;
 export type RegisterMutationResult = Apollo.MutationResult<RegisterMutation>;
 export type RegisterMutationOptions = Apollo.BaseMutationOptions<RegisterMutation, RegisterMutationVariables>;
+export const GetDoctorsDocument = gql`
+    query GetDoctors {
+  getDoctors {
+    id
+    lastName
+    firstName
+    adresse
+    numberPhone
+    speciality
+  }
+}
+    `;
+
+/**
+ * __useGetDoctorsQuery__
+ *
+ * To run a query within a React component, call `useGetDoctorsQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetDoctorsQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetDoctorsQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetDoctorsQuery(baseOptions?: Apollo.QueryHookOptions<GetDoctorsQuery, GetDoctorsQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetDoctorsQuery, GetDoctorsQueryVariables>(GetDoctorsDocument, options);
+      }
+export function useGetDoctorsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetDoctorsQuery, GetDoctorsQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetDoctorsQuery, GetDoctorsQueryVariables>(GetDoctorsDocument, options);
+        }
+export type GetDoctorsQueryHookResult = ReturnType<typeof useGetDoctorsQuery>;
+export type GetDoctorsLazyQueryHookResult = ReturnType<typeof useGetDoctorsLazyQuery>;
+export type GetDoctorsQueryResult = Apollo.QueryResult<GetDoctorsQuery, GetDoctorsQueryVariables>;
 export const MeDocument = gql`
     query Me {
   userSession(me: true) {

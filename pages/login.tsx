@@ -54,7 +54,6 @@ const Login: React.FC = ({ }) => {
                                 return errors
                             }}
                             onSubmit={async (values, { setSubmitting }) => {
-                                console.log('ff')
                                 await login({
                                     variables: values,
                                     update: (cache, { data }) => {
