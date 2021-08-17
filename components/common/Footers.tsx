@@ -49,7 +49,50 @@ const navigation = {
             ),
         },
     ],
+    speciality: [
+        { name: "Médecine Générale", href: '/' },
+        { name: "Dentiste", href: '/' },
+        { name: "Pédiatre", href: '/' },
+        { name: "Ophtalmologue", href: '/' },
+        { name: "Dermatologue", href: '/' },
+        { name: "Cardiologue", href: '/' },
+        { name: "Otorhinolaryngologue", href: '/' },
+        { name: "Gynécologue", href: '/' },
+        { name: "Neurologue", href: '/' },
+        { name: "Psychiatre", href: '/' },
+        { name: "Gastrologue", href: '/' },
+        { name: "Urologue Pneumologue", href: '/' },
+    ],
+    mostViewd1: [
+        { name: "Dentiste à Casablanca", href: '/' },
+        { name: "Ophtalmologue à Casablanca", href: '/' },
+        { name: "Dermatologue à Casablanca", href: '/' },
+        { name: "Cardiologue à Casablanca", href: '/' },
+        { name: "Otorhinolaryngologie à Casablanca", href: '/' },
+        { name: "Gynécologue à Casablanca", href: '/' },
+        { name: "Neurologue à Casablanca", href: '/' },
+        { name: "Pédiatre à Casablanca", href: '/' },
+        { name: "Psychiatre à Casablanca", href: '/' },
+        { name: "Gastrologue à Casablanca", href: '/' },
+        { name: "Urologue à Casablanca", href: '/' },
+        { name: "Pneumologue à Casablanca", href: '/' },
+    ],
+    mostViewd2: [
+        { name: "Dentiste à Rabat", href: '/' },
+        { name: "Ophtalmologue à Rabat", href: '/' },
+        { name: "Dermatologue à Rabat", href: '/' },
+        { name: "Cardiologue à Rabat", href: '/' },
+        { name: "Otorhinolaryngologie à Rabat", href: '/' },
+        { name: "Gynécologue à Rabat", href: '/' },
+        { name: "Neurologue à Rabat", href: '/' },
+        { name: "Pédiatre à Rabat", href: '/' },
+        { name: "Psychiatre à Rabat", href: '/' },
+        { name: "Gastrologue à Rabat", href: '/' },
+        { name: "Urologue à Rabat", href: '/' },
+        { name: "Pneumologue à Rabat", href: '/' },
+    ]
 }
+
 
 const Footer = () => {
     return (
@@ -57,6 +100,7 @@ const Footer = () => {
             <h2 id="footerHeading" className="sr-only">
                 Footer
             </h2>
+
             <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                 <nav className="-mx-5 flex flex-wrap justify-center" aria-label="Footer">
                     {navigation.main.map((item) => (
@@ -80,6 +124,60 @@ const Footer = () => {
                         </div>
                     ))}
                 </nav>
+
+                <div className="xl:grid xl:gap-8 my-10 space-y-10">
+                    <div className="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                Spécialités:
+                                </h3>
+                            <ul role="list" className="mt-4 space-y-4">
+                                {
+                                    navigation.speciality.map((x, index) => (
+                                        <li key={index}>
+                                            <a href="#" className="text-base text-gray-300 hover:text-white">
+                                                {x.name}
+                                            </a>
+                                        </li>
+
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                        <div className="mt-12 md:mt-0">
+                            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
+                                Recherches Fréquentes :
+                            </h3>
+                            <div className="flex space-x-10">
+                                <ul role="list" className="mt-4 space-y-4">
+                                    {
+                                        navigation.mostViewd1.map((x, index) => (
+                                            <li key={index}>
+                                                <a href="#" className="text-base text-gray-300 hover:text-white">
+                                                    {x.name}
+                                                </a>
+                                            </li>
+
+                                        ))
+                                    }
+                                </ul>
+                                <ul role="list" className="mt-4 space-y-4">
+                                    {
+                                        navigation.mostViewd2.map((x, index) => (
+                                            <li key={index}>
+                                                <a href="#" className="text-base text-gray-300 hover:text-white">
+                                                    {x.name}
+                                                </a>
+                                            </li>
+
+                                        ))
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="border-t border-gray-200 mt-8 pt-8 lg:flex lg:items-center lg:justify-between xl:mt-8">
                     <div>
                         <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
@@ -124,7 +222,7 @@ const Footer = () => {
                 </div>
                 <p className="mt-8 text-center text-base text-gray-400">&copy;  Copyright 2021 Goodoc, tous droits réservé.</p>
             </div>
-        </footer>
+        </footer >
     )
 }
 export default Footer;
