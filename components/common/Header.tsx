@@ -104,11 +104,19 @@ const Header: React.FC<Props> = ({ theme }) => {
                                 <div className="pt-5 pb-6 px-5 space-y-6">
                                     <div className="flex items-center justify-between">
                                         <div>
-                                            <img
-                                                className="h-8 w-auto"
-                                                src="https://tailwindui.com/img/logos/workflow-mark-orange-400-to-pink-500-gradient.svg"
-                                                alt="Workflow"
-                                            />
+                                            <Link href='/'>
+                                                <a>
+                                                    <span className="sr-only">Workflow</span>
+                                                    <div className="h-8 w-auto relative sm:h-14">
+                                                        <Image
+                                                            src={profilePic}
+                                                            alt="logo"
+                                                            layout="fill"
+                                                            objectFit="contain"
+                                                        />
+                                                    </div>
+                                                </a>
+                                            </Link>
                                         </div>
                                         <div className="-mr-2">
                                             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
