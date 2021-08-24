@@ -9,7 +9,7 @@ import Image from 'next/image'
 import profilePic from '../assets/logoBlack.svg'
 
 const Register: React.FC = ({ }) => {
-    const [login] = useRegisterMutation()
+    const [register] = useRegisterMutation()
     return (
         <div>
             <Head>
@@ -37,7 +37,7 @@ const Register: React.FC = ({ }) => {
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                     <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
                         <Formik
-                            initialValues={{ username: '', password: '' }}
+                            initialValues={{ username: '', password: '', confirmPassword: '', firstName: "", lastName: "", numberPhone: "" }}
                             validate={(values) => {
                                 const errors: {
                                     username?: string | undefined
@@ -50,7 +50,7 @@ const Register: React.FC = ({ }) => {
                             }}
                             onSubmit={async (values, { setSubmitting }) => {
                                 console.log('ff', values)
-                                login({ variables: values }).then(() => {
+                                register({ variables: values }).then(() => {
                                     console.log(`d`)
                                 }).catch(() => console.log("dez"))
                                 setSubmitting(false)
@@ -72,6 +72,66 @@ const Register: React.FC = ({ }) => {
                                     method="POST"
                                     onSubmit={handleSubmit}
                                 >
+                                    <div>
+                                        <label
+                                            htmlFor="firstName"
+                                            className="block text-sm font-medium text-gray-700"
+                                        >
+                                            Nom
+                    </label>
+                                        <div className="mt-1">
+                                            <input
+                                                type="text"
+                                                name="firstName"
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                                value={values.firstName}
+                                                required
+                                                className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+                                            />
+                                            {errors.firstName && touched.firstName && errors.firstName}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label
+                                            htmlFor="lastName"
+                                            className="block text-sm font-medium text-gray-700"
+                                        >
+                                            Prenom
+                    </label>
+                                        <div className="mt-1">
+                                            <input
+                                                type="text"
+                                                name="lastName"
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                                value={values.lastName}
+                                                required
+                                                className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+                                            />
+                                            {errors.lastName && touched.lastName && errors.lastName}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label
+                                            htmlFor="numberPhone"
+                                            className="block text-sm font-medium text-gray-700"
+                                        >
+                                            Numero de telephone
+                    </label>
+                                        <div className="mt-1">
+                                            <input
+                                                type="text"
+                                                name="numberPhone"
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
+                                                value={values.numberPhone}
+                                                required
+                                                className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+                                            />
+                                            {errors.numberPhone && touched.numberPhone && errors.numberPhone}
+                                        </div>
+                                    </div>
                                     <div>
                                         <label
                                             htmlFor="username"
@@ -106,6 +166,26 @@ const Register: React.FC = ({ }) => {
                                                 name="password"
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
+                                                value={values.confirmPassword}
+                                                required
+                                                className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
+                                            />
+                                            {errors.password && touched.password && errors.password}
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label
+                                            htmlFor="confirmPassword"
+                                            className="block text-sm font-medium text-gray-700"
+                                        >
+                                            Confirmation mot de passe
+                    </label>
+                                        <div className="mt-1">
+                                            <input
+                                                type="confirmPassword"
+                                                name="confirmPassword"
+                                                onChange={handleChange}
+                                                onBlur={handleBlur}
                                                 value={values.password}
                                                 required
                                                 className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
@@ -114,31 +194,6 @@ const Register: React.FC = ({ }) => {
                                         </div>
                                     </div>
 
-                                    <div className="flex items-center justify-between">
-                                        <div className="flex items-center">
-                                            <input
-                                                id="remember_me"
-                                                name="remember_me"
-                                                type="checkbox"
-                                                className="h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300 rounded"
-                                            />
-                                            <label
-                                                htmlFor="remember_me"
-                                                className="ml-2 block text-sm text-gray-900"
-                                            >
-                                                Remember me
-                      </label>
-                                        </div>
-
-                                        <div className="text-sm">
-                                            <a
-                                                href="#d"
-                                                className="font-medium text-yellow-600 hover:text-yellow-500"
-                                            >
-                                                Forgot your password?
-                      </a>
-                                        </div>
-                                    </div>
 
                                     <div>
                                         <button
