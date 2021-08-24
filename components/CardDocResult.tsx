@@ -10,13 +10,13 @@ type Props = {
     person: any
 }
 const CardDocResult: React.FC<Props> = ({ person }) => {
-    const [open, setOpen] = useState(false)
+    // const [open, setOpen] = useState(false)
     return (
         <>
             <li
                 key={person?.email}
                 className="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200 z-10"
-                onClick={() => setOpen(true)}
+            // onClick={() => setOpen(true)}
             >
                 <div className="flex-1 flex divide-x divide-gray-100">
                     <div className="flex flex-col p-8 md:w-72 w-full">
@@ -109,7 +109,7 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
                     </div>
                 </div>
             </li>
-            <Transition.Root show={open} as={Fragment}>
+            {/* <Transition.Root show={open} as={Fragment}>
                 <Dialog as="div" static className="fixed inset-0 overflow-hidden z-50" open={open} onClose={setOpen}>
                     <div className="absolute inset-0 overflow-hidden">
 
@@ -151,7 +151,6 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* Main */}
                                         <div className="divide-y divide-gray-200">
                                             <div className="pb-6">
                                                 <div className="bg-indigo-700 h-24 sm:h-20 lg:h-28" />
@@ -293,7 +292,7 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
                         </div>
                     </div>
                 </Dialog>
-            </Transition.Root>
+            </Transition.Root> */}
         </>
     )
 }
