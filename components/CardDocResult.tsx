@@ -53,34 +53,17 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
                                 </div>
                                 <div className="sm:col-span-1">
                                     <dt className="text-sm font-medium text-gray-500">Email address</dt>
-                                    <dd className="mt-1 text-sm text-gray-900">{person?.firstName}</dd>
+                                    <dd className="mt-1 text-sm text-gray-900">{person?.email || "Non renseigner"}</dd>
                                 </div>
                                 <div className="sm:col-span-1">
                                     <dt className="text-sm font-medium text-gray-500">Numéro de téléphone</dt>
                                     <dd className="mt-1 text-sm text-gray-900">{person?.numberPhone}</dd>
                                 </div>
                                 <div className="sm:col-span-1">
-                                    <dt className="text-sm font-medium text-gray-500">Moyens de paiement</dt>
-                                    {/* <dd className="mt-1 text-sm text-gray-900 uppercase font-bold">{person?.payment.map((p: any, index: number) => (<>{p}{index != person?.payment.length - 1 ? ", " : ""}</>))}</dd> */}
-                                </div>
-                                <div className="sm:col-span-1">
                                     <dt className="text-sm font-medium text-gray-500">Disponibilité</dt>
-                                    {/* <dd className="mt-1 text-sm text-gray-900 space-y-1">
-                                        {person?.hours.map((h: { id: React.Key | null | undefined; days: any[]; hours: any[] }) => (
-                                            <div className="flex space-x-1 overflow-hidden items-center" key={h.id}>
-                                                {h.days.map((d: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined, index: React.Key | null | undefined) => (
-                                                    <span key={index} className="inline-flex items-center justify-center h-6 w-6 rounded-full bg-green-700">
-                                                        <span className="text-xs font-medium leading-none text-white">{d}</span>
-                                                    </span>
-                                                ))}
-                                            :
-                                                {h.hours.map((sh: { start: string | number | boolean | {} | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactNodeArray | React.ReactPortal | null | undefined; end: string | number | boolean | {} | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactNodeArray | React.ReactPortal | null | undefined }, index: React.Key | null | undefined) => (
-                                                    <div key={index}>{sh.start} - {sh.end}</div>
-                                                ))}
-                                            </div>
-
-                                        ))}
-                                    </dd> */}
+                                    <dd className="mt-1 text-sm text-gray-900 space-y-1">
+                                        <p>8h30-19h</p>
+                                    </dd>
                                 </div>
                             </dl>
                         </div>
