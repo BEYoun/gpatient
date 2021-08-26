@@ -18,7 +18,7 @@ const Register: React.FC = ({ }) => {
             </Head>
             <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
                 <div className="sm:mx-auto sm:w-full sm:max-w-md">
-                    <div className="mx-auto relative h-20 w-40 rounded-sm bg-opacity-10 bg-primary-dark">
+                    <div className="mx-auto relative h-40 w-80 rounded-sm">
                         <Link href="/" passHref>
                             <Image
                                 src={profilePic}
@@ -29,13 +29,16 @@ const Register: React.FC = ({ }) => {
                             />
                         </Link>
                     </div>
-                    <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-                        S&apos;enregistrer
-                    </h2>
+
                 </div>
 
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-                    <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+                    <div className="bg-primary-low shadow sm:rounded-t-lg">
+                        <h2 className="mt-6 text-center text-3xl font-extrabold shadow text-white py-8">
+                            S&apos;enregistrer
+                            </h2>
+                    </div>
+                    <div className="bg-white py-8 px-4 shadow sm:rounded-b-lg sm:px-10">
                         <Formik
                             initialValues={{ username: '', password: '', confirmPassword: '', firstName: "", lastName: "", numberPhone: "" }}
                             validate={(values) => {
