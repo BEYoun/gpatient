@@ -20,7 +20,7 @@ export default function MultiSelectInputOption({ }) {
         <Listbox value={selected} onChange={setSelected}>
             {({ open }) => (
                 <>
-                    <div className="relative w-full sm:w-1/3 z-50">
+                    <div className="relative w-full sm:w-1/3 z-40">
                         <Listbox.Button className="relative w-full bg-white border border-gray-300 rounded-md shadow-sm pl-10 pr-10 py-3 text-left cursor-default focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             <span className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none">
                                 <LocationMarkerIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
