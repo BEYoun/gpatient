@@ -9,7 +9,8 @@ import {
     LoginIcon
 } from '@heroicons/react/outline'
 
-import profilePic from '../../assets/logo.svg'
+import logo from '../../assets/logo.svg'
+import logoBlack from '../../assets/logoBlack.svg'
 import { useLogoutMutation, useMeQuery } from '../../graphql/generated/graphql'
 
 const solutions = [
@@ -41,7 +42,7 @@ const Header: React.FC<Props> = ({ theme }) => {
                                         <span className="sr-only">Workflow</span>
                                         <div className="h-28 w-36 relative sm:h-14">
                                             <Image
-                                                src={profilePic}
+                                                src={theme === 'black' ? logo : logoBlack}
                                                 alt="logo"
                                                 layout="fill"
                                                 objectFit="contain"
@@ -103,13 +104,13 @@ const Header: React.FC<Props> = ({ theme }) => {
                             <div className="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
                                 <div className="pt-5 pb-6 px-5 space-y-6">
                                     <div className="flex items-center justify-between">
-                                        <div>
+                                        <div className="flex-1">
                                             <Link href='/'>
                                                 <a>
                                                     <span className="sr-only">Workflow</span>
                                                     <div className="h-8 w-auto relative sm:h-14">
                                                         <Image
-                                                            src={profilePic}
+                                                            src={logoBlack}
                                                             alt="logo"
                                                             layout="fill"
                                                             objectFit="contain"

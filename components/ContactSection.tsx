@@ -9,7 +9,7 @@ export default function ContactSection() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-3">
                         {/* Contact information */}
-                        <div className="relative overflow-hidden py-10 px-6 bg-indigo-700 sm:px-10 xl:p-12">
+                        <div className="relative overflow-hidden py-10 px-6 bg-primary sm:px-10 xl:p-12">
                             <div className="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
                                 <svg
                                     className="absolute inset-0 w-full h-full"
@@ -108,8 +108,7 @@ export default function ContactSection() {
                             </div>
                             <h3 className="text-2xl font-medium text-accent">Contact information</h3>
                             <p className="mt-6 text-base text-indigo-50 max-w-3xl">
-                                237 Bvd Zrektouni, 1er étage Casablanca.<br />
-                                Springfield, OR 12345
+                                237 Bvd Zrektouni, 1er étage Casablanca.
                             </p>
                             <dl className="mt-8 space-y-6">
                                 <dt>
@@ -274,7 +273,7 @@ export default function ContactSection() {
                                 <div className="sm:col-span-2 sm:flex sm:justify-end">
                                     <button
                                         type="submit"
-                                        className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto"
+                                        className="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-primary hover:bg-primary-deep focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-low sm:w-auto"
                                     >
                                         Submit
                   </button>

@@ -184,7 +184,7 @@ const Footer = () => {
                             S’abonner à la newsletter
                             </h3>
                         <p className="mt-2 text-base text-white">
-                            les dernières news, articles, ressources, envoyées directement dans votre boite mail.
+                            les dernières news, articles et ressources envoyées directement dans votre boite mail.
                             </p>
                     </div>
                     <form className="mt-4 sm:flex sm:max-w-md lg:mt-0">
