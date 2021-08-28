@@ -55,14 +55,14 @@ export type Mutation = {
 
 export type MutationCreateUserArgs = {
   password: Scalars['String'];
-  username: Scalars['String'];
+  email: Scalars['String'];
   role: Scalars['String'];
 };
 
 
 export type MutationCreateUserClientArgs = {
   password: Scalars['String'];
-  username: Scalars['String'];
+  email: Scalars['String'];
   role: Scalars['String'];
   cabinetId: Scalars['String'];
 };
@@ -70,7 +70,7 @@ export type MutationCreateUserClientArgs = {
 
 export type MutationCreateUserSessionArgs = {
   password: Scalars['String'];
-  username: Scalars['String'];
+  email: Scalars['String'];
 };
 
 
@@ -121,7 +121,7 @@ export type Patient = {
 export type Profile = {
   __typename?: 'Profile';
   id: Scalars['ID'];
-  username: Scalars['String'];
+  email: Scalars['String'];
   cabinet: Cabinet;
 };
 
@@ -153,7 +153,7 @@ export type QueryGetPatientByIdArgs = {
 
 export type User = {
   __typename?: 'User';
-  username: Scalars['ID'];
+  email: Scalars['ID'];
   role: Scalars['String'];
 };
 
@@ -165,7 +165,7 @@ export type UserSession = {
 };
 
 export type CreateUserSessionMutationVariables = Exact<{
-  username: Scalars['String'];
+  email: Scalars['String'];
   password: Scalars['String'];
 }>;
 
@@ -177,7 +177,7 @@ export type CreateUserSessionMutation = (
     & Pick<UserSession, 'expiresAt' | 'createdAt'>
     & { user: (
       { __typename?: 'User' }
-      & Pick<User, 'username' | 'role'>
+      & Pick<User, 'email' | 'role'>
     ) }
   ) }
 );
@@ -191,7 +191,7 @@ export type LogoutMutation = (
 );
 
 export type RegisterMutationVariables = Exact<{
-  username: Scalars['String'];
+  email: Scalars['String'];
   password: Scalars['String'];
 }>;
 
@@ -200,7 +200,7 @@ export type RegisterMutation = (
   { __typename?: 'Mutation' }
   & { createUser: (
     { __typename?: 'User' }
-    & Pick<User, 'username' | 'role'>
+    & Pick<User, 'email' | 'role'>
   ) }
 );
 
@@ -224,17 +224,17 @@ export type MeQuery = (
     { __typename?: 'UserSession' }
     & { user: (
       { __typename?: 'User' }
-      & Pick<User, 'username' | 'role'>
+      & Pick<User, 'email' | 'role'>
     ) }
   )> }
 );
 
 
 export const CreateUserSessionDocument = gql`
-    mutation CreateUserSession($username: String!, $password: String!) {
-  createUserSession(username: $username, password: $password) {
+    mutation CreateUserSession($email: String!, $password: String!) {
+  createUserSession(email: $email, password: $password) {
     user {
-      username
+      email
       role
     }
     expiresAt
@@ -257,7 +257,7 @@ export type CreateUserSessionMutationFn = Apollo.MutationFunction<CreateUserSess
  * @example
  * const [createUserSessionMutation, { data, loading, error }] = useCreateUserSessionMutation({
  *   variables: {
- *      username: // value for 'username'
+ *      email: // value for 'email'
  *      password: // value for 'password'
  *   },
  * });
@@ -300,9 +300,9 @@ export type LogoutMutationHookResult = ReturnType<typeof useLogoutMutation>;
 export type LogoutMutationResult = Apollo.MutationResult<LogoutMutation>;
 export type LogoutMutationOptions = Apollo.BaseMutationOptions<LogoutMutation, LogoutMutationVariables>;
 export const RegisterDocument = gql`
-    mutation Register($username: String!, $password: String!) {
-  createUser(password: $password, username: $username, role: "patient") {
-    username
+    mutation Register($email: String!, $password: String!) {
+  createUser(password: $password, email: $email, role: "patient") {
+    email
     role
   }
 }
@@ -322,7 +322,7 @@ export type RegisterMutationFn = Apollo.MutationFunction<RegisterMutation, Regis
  * @example
  * const [registerMutation, { data, loading, error }] = useRegisterMutation({
  *   variables: {
- *      username: // value for 'username'
+ *      email: // value for 'email'
  *      password: // value for 'password'
  *   },
  * });
@@ -377,7 +377,7 @@ export const MeDocument = gql`
     query Me {
   userSession(me: true) {
     user {
-      username
+      email
       role
     }
   }

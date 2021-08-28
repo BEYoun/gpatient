@@ -51,14 +51,14 @@ const Login: React.FC = ({ }) => {
                     </div>
                     <div className="bg-white py-8 px-4 shadow sm:rounded-b-lg sm:px-10">
                         <Formik
-                            initialValues={{ username: '', password: '' }}
+                            initialValues={{ email: '', password: '' }}
                             validate={(values) => {
                                 const errors: {
-                                    username?: string | undefined
+                                    email?: string | undefined
                                     password?: string | undefined
                                 } = {}
-                                if (!values.username) {
-                                    errors.username = 'Required'
+                                if (!values.email) {
+                                    errors.email = 'Required'
                                 }
                                 return errors
                             }}
@@ -76,7 +76,7 @@ const Login: React.FC = ({ }) => {
                                     },
                                 })
                                     .then(({ data }) => {
-                                        if (data?.createUserSession.user.username)
+                                        if (data?.createUserSession.user.email)
                                             router.push('/')
 
                                     })
@@ -104,7 +104,7 @@ const Login: React.FC = ({ }) => {
                                 >
                                     <div>
                                         <label
-                                            htmlFor="username"
+                                            htmlFor="email"
                                             className="block text-sm font-medium text-gray-700"
                                         >
                                             Email address
@@ -112,14 +112,14 @@ const Login: React.FC = ({ }) => {
                                         <div className="mt-1">
                                             <input
                                                 type="text"
-                                                name="username"
+                                                name="email"
                                                 onChange={handleChange}
                                                 onBlur={handleBlur}
-                                                value={values.username}
+                                                value={values.email}
                                                 required
                                                 className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm"
                                             />
-                                            {errors.username && touched.username && errors.username}
+                                            {errors.email && touched.email && errors.email}
                                         </div>
                                     </div>
 

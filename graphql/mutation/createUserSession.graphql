@@ -1,7 +1,7 @@
-mutation CreateUserSession($username: String!, $password: String!) {
-  createUserSession(username: $username, password: $password) {
+mutation CreateUserSession($email: String!, $password: String!) {
+  createUserSession(email: $email, password: $password) {
     user {
-      username
+      email
       role
     }
     expiresAt

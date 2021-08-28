@@ -1,6 +1,6 @@
-mutation Register($username: String!, $password: String!) {
-  createUser(password: $password, username: $username, role: "patient") {
-    username
+mutation Register($email: String!, $password: String!) {
+  createUser(password: $password, email: $email, role: "patient") {
+    email
     role
   }
 }
