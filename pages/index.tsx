@@ -16,6 +16,8 @@ import etape3 from '../assets/etape3.svg'
 import Head from 'next/head'
 import Hero from '../components/Sections/Hero'
 import Etape from '../components/Sections/Etape'
+import BannerSecurity from '../components/Sections/BannerSecurity'
+import WhySection from '../components/Sections/why'
 
 const etapes = [
   {
@@ -38,7 +40,7 @@ const etapes = [
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-gray-50">
       <Head>
         <title>Goodoc</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -77,7 +79,9 @@ const Home: React.FC = () => {
         </div>
       </div>
 
-
+      <BannerSecurity />
+      <WhySection />
+      <BannerSecurity />
       {/* Footer */}
       <Footer />
     </div>
