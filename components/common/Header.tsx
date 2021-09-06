@@ -12,15 +12,9 @@ import {
 import logo from '../../assets/logo.svg'
 import logoBlack from '../../assets/logoBlack.svg'
 import { useLogoutMutation, useMeQuery } from '../../graphql/generated/graphql'
+import { LogoutIcon } from '@heroicons/react/solid';
 
-const solutions = [
-    {
-        name: 'Se connecter',
-        description: 'Get a better understanding of where your traffic is coming from.',
-        href: '/login',
-        icon: LoginIcon,
-    },
-]
+
 
 type Props = {
     theme: string
@@ -65,23 +59,25 @@ const Header: React.FC<Props> = ({ theme }) => {
                                 </Link>
                             </Popover.Group>
 
-                            {!data?.userSession?.user ? <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
-                                <Link href='/login'>
-                                    <a
-                                        className={`whitespace-nowrap ${theme === "black" ? "bg-white" : "bg-accent"} border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600" : "text-black"}  hover:bg-indigo-50`}
-                                    >
-                                        Se connecter
+                            <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
+                                {!data?.userSession?.user ?
+                                    <Link href='/login'>
+                                        <a
+                                            className={`whitespace-nowrap ${theme === "black" ? "bg-white" : "bg-accent"} border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600" : "text-black"}  hover:bg-indigo-50`}
+                                        >
+                                            Se connecter
                                     </a>
-                                </Link>
-                            </div> : <button
-                                className={`whitespace-nowrap ${theme === "black" ? "bg-white" : "bg-accent"} border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600" : "text-black"}  hover:bg-indigo-50`}
-                                onClick={async () => {
-                                    await logout()
-                                    await apolloClient.resetStore();
-                                }}
-                            >
-                                Logout
+                                    </Link>
+                                    : <button
+                                        className={`whitespace-nowrap ${theme === "black" ? "bg-white" : "bg-accent"} border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600" : "text-black"}  hover:bg-indigo-50`}
+                                        onClick={async () => {
+                                            await logout()
+                                            await apolloClient.resetStore();
+                                        }}
+                                    >
+                                        Logout
                             </button>}
+                            </div>
 
                         </div>
                     </div>
@@ -128,14 +124,24 @@ const Header: React.FC<Props> = ({ theme }) => {
                                     </div>
                                     <div className="mt-6">
                                         <nav className="grid gap-y-8">
-                                            {solutions.map((item) => (
-                                                <Link key={item.name} href={item.href}>
+                                            {!data?.userSession?.user ?
+                                                <Link href='/login' >
                                                     <a className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50" >
-                                                        <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
-                                                        <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
+                                                        <LoginIcon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                                                        <span className="ml-3 text-base font-medium text-gray-900">Se connecter</span>
                                                     </a>
-                                                </Link>
-                                            ))}
+                                                </Link> :
+                                                <button
+                                                    className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
+                                                    onClick={async () => {
+                                                        await logout()
+                                                        await apolloClient.resetStore();
+                                                    }}
+                                                >
+                                                    <LogoutIcon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                                                    <span className="ml-3 text-base font-medium text-gray-900">Se deconnecter</span>
+                                                </button>
+                                            }
                                         </nav>
                                     </div>
                                 </div>
