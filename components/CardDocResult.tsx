@@ -28,7 +28,7 @@ const CardDocResult: React.FC<Props> = ({ person }) => {
                         <h3 className="mt-6 text-gray-900 text-sm font-medium">{person ? person?.firstName + " " + person?.lastName : ""}</h3>
                         <dl className="mt-1 flex-grow flex flex-col justify-between">
                             <dt className="sr-only">Title</dt>
-                            <dd className="text-gray-500 text-sm capitalize">{person ? person?.speciality : ""}</dd>
+                            <dd className="text-gray-500 text-sm capitalize">{person ? person?.speciality?.name : ""}</dd>
                             <dt className="sr-only">Role</dt>
                             {/* <dd className="mt-3 space-x-1">
                                 {person?.typeConsulation.map((t: boolean | React.ReactChild | React.ReactFragment | React.ReactPortal | null | undefined, index: React.Key | null | undefined) => (

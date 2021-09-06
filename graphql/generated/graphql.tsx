@@ -31,15 +31,24 @@ export enum CacheControlScope {
   Private = 'PRIVATE'
 }
 
+export type City = {
+  __typename?: 'City';
+  id?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+  region_id?: Maybe<Region>;
+};
 
-export type DoctorDb = {
-  __typename?: 'DoctorDb';
-  id: Scalars['String'];
+
+export type Doctor = {
+  __typename?: 'Doctor';
+  id: Scalars['Int'];
   lastName: Scalars['String'];
   firstName: Scalars['String'];
   adresse: Scalars['String'];
   numberPhone: Scalars['String'];
-  speciality: Scalars['String'];
+  speciality?: Maybe<Speciality>;
+  ville?: Maybe<City>;
+  email?: Maybe<Scalars['String']>;
 };
 
 export type Mutation = {
@@ -101,6 +110,13 @@ export type MutationCreatePatientArgs = {
   numberPhone?: Maybe<Scalars['String']>;
 };
 
+export type PaginationDoctors = {
+  __typename?: 'PaginationDoctors';
+  doctors?: Maybe<Array<Maybe<Doctor>>>;
+  nbrPages: Scalars['Int'];
+  page: Scalars['Int'];
+};
+
 export type Patient = {
   __typename?: 'Patient';
   id: Scalars['ID'];
@@ -130,7 +146,7 @@ export type Query = {
   userSession?: Maybe<UserSession>;
   allCabinet?: Maybe<Array<Maybe<Cabinet>>>;
   getCabinetById?: Maybe<Cabinet>;
-  getDoctors?: Maybe<Array<Maybe<DoctorDb>>>;
+  getDoctors: PaginationDoctors;
   getAllPatients?: Maybe<Array<Maybe<Patient>>>;
   getPatientById: Patient;
 };
@@ -148,6 +164,18 @@ export type QueryGetCabinetByIdArgs = {
 
 export type QueryGetPatientByIdArgs = {
   patientId: Scalars['String'];
+};
+
+export type Region = {
+  __typename?: 'Region';
+  id?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
+};
+
+export type Speciality = {
+  __typename?: 'Speciality';
+  id?: Maybe<Scalars['Int']>;
+  name?: Maybe<Scalars['String']>;
 };
 
 
@@ -209,10 +237,21 @@ export type GetDoctorsQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type GetDoctorsQuery = (
   { __typename?: 'Query' }
-  & { getDoctors?: Maybe<Array<Maybe<(
-    { __typename?: 'DoctorDb' }
-    & Pick<DoctorDb, 'id' | 'lastName' | 'firstName' | 'adresse' | 'numberPhone' | 'speciality'>
-  )>>> }
+  & { getDoctors: (
+    { __typename?: 'PaginationDoctors' }
+    & Pick<PaginationDoctors, 'nbrPages' | 'page'>
+    & { doctors?: Maybe<Array<Maybe<(
+      { __typename?: 'Doctor' }
+      & Pick<Doctor, 'id' | 'lastName' | 'firstName' | 'adresse' | 'numberPhone'>
+      & { speciality?: Maybe<(
+        { __typename?: 'Speciality' }
+        & Pick<Speciality, 'name'>
+      )>, ville?: Maybe<(
+        { __typename?: 'City' }
+        & Pick<City, 'name'>
+      )> }
+    )>>> }
+  ) }
 );
 
 export type MeQueryVariables = Exact<{ [key: string]: never; }>;
@@ -337,12 +376,21 @@ export type RegisterMutationOptions = Apollo.BaseMutationOptions<RegisterMutatio
 export const GetDoctorsDocument = gql`
     query GetDoctors {
   getDoctors {
-    id
-    lastName
-    firstName
-    adresse
-    numberPhone
-    speciality
+    doctors {
+      id
+      lastName
+      firstName
+      adresse
+      numberPhone
+      speciality {
+        name
+      }
+      ville {
+        name
+      }
+    }
+    nbrPages
+    page
   }
 }
     `;

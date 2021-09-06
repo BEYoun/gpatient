@@ -1,6 +1,7 @@
 import React from 'react'
 import { useGetDoctorsQuery } from '../graphql/generated/graphql';
 import CardDocResult from './CardDocResult';
+import PagiantionDoctors from './Sections/components/Pagination';
 
 const ListResult = () => {
     const { data, loading, error } = useGetDoctorsQuery();
@@ -26,11 +27,16 @@ const ListResult = () => {
                                     </div>
                                 </div>
                             </div>
-                        ) : error ? (<div>err</div>) : data?.getDoctors?.map((person) => (
+                        ) : error ? (<div>err</div>) : data?.getDoctors?.doctors?.slice(0, 10).map((person) => (
                             <CardDocResult key={person?.id} person={person} />
                         ))
                     }
                 </ul>
+                {
+                    !loading ? (
+                        <PagiantionDoctors nbrPage={data?.getDoctors?.nbrPages!} selectedPage={data?.getDoctors?.page!} />
+                    ) : null
+                }
             </div>
         </div>
     )
