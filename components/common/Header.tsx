@@ -51,23 +51,25 @@ const Header: React.FC<Props> = ({ theme }) => {
                                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
                                 </Popover.Button>
                             </div>
-                            <Popover.Group as="nav" className="hidden md:flex space-x-10">
-                                <Link href='https://doctor.goodoc.co/'>
-                                    <a className={`place-self-end text-base font-medium text-opacity-70 ${theme === "black" ? "text-gray-300" : "text-black"} hover:text-white hover:text-opacity-100"`}>
-                                        Êtes-vous un professionnel de la santé?
-                                    </a>
-                                </Link>
-                            </Popover.Group>
 
                             <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
                                 {!data?.userSession?.user ?
-                                    <Link href='/login'>
-                                        <a
-                                            className={`whitespace-nowrap ${theme === "black" ? "bg-white" : "bg-accent"} border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600" : "text-black"}  hover:bg-indigo-50`}
-                                        >
-                                            Se connecter
-                                    </a>
-                                    </Link>
+                                    <>
+                                        <Link href='https://doctor.goodoc.co/' passHref>
+                                            <div
+                                                className={`whitespace-nowrap cursor-pointer border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600 hover:bg-indigo-50 bg-white" : "text-white bg-primary hover:bg-primary-deep"} `}
+                                            >
+                                                Êtes-vous un professionnel de la santé?
+                                            </div>
+                                        </Link>
+                                        <Link href='/login' passHref >
+                                            <div
+                                                className={`whitespace-nowrap cursor-pointer border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-white bg-primary hover:bg-primary-deep" : "text-black bg-accent hover:bg-accent-deep"}  `}
+                                            >
+                                                Se connecter
+                                            </div>
+                                        </Link>
+                                    </>
                                     : <button
                                         className={`whitespace-nowrap ${theme === "black" ? "bg-white" : "bg-accent"} border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex items-center justify-center text-base font-medium ${theme === "black" ? "text-blue-600" : "text-black"}  hover:bg-indigo-50`}
                                         onClick={async () => {
@@ -145,16 +147,19 @@ const Header: React.FC<Props> = ({ theme }) => {
                                         </nav>
                                     </div>
                                 </div>
-                                <div className="py-6 px-5 space-y-6">
-                                    <div>
-                                        <a
-                                            href="#"
-                                            className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-                                        >
-                                            Besoin d&apos;aide?
-                        </a>
-                                    </div>
-                                </div>
+                                {!data?.userSession?.user ?
+                                    <div className="py-6 px-5 space-y-6">
+                                        <div>
+                                            <Link href='https://doctor.goodoc.co/'>
+                                                <a
+                                                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                                                >
+                                                    Êtes-vous un professionnel de la santé?
+                                            </a>
+                                            </Link>
+                                        </div>
+                                    </div> : null
+                                }
                             </div>
                         </Popover.Panel>
                     </Transition>
