@@ -1,20 +1,22 @@
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, LocationMarkerIcon, SelectorIcon } from '@heroicons/react/solid'
+import { classNames } from '../../utils/function'
 
-const people = [
-    { id: 1, name: 'Casablanca' },
-    { id: 2, name: 'Marrakech' },
-    { id: 3, name: 'Agadir' },
-    { id: 4, name: 'Mohammedia' },
-]
 
-function classNames(...classes: any) {
-    return classes.filter(Boolean).join(' ')
+
+
+interface item {
+    id: number,
+    name: string
+}
+interface props {
+    values: any
 }
 
-export default function MultiSelectInputOption({ }) {
-    const [selected, setSelected] = useState(people[0])
+
+const MultiSelectInputOption: React.FC<props> = ({ values }) => {
+    const [selected, setSelected] = useState(values[0])
 
     return (
         <Listbox value={selected} onChange={setSelected}>
@@ -39,7 +41,7 @@ export default function MultiSelectInputOption({ }) {
                             leaveTo="opacity-0"
                         >
                             <Listbox.Options className="absolute z-10 mt-1 w-full bg-white shadow-lg max-h-60 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm">
-                                {people.map((person) => (
+                                {values.map((person: item) => (
                                     <Listbox.Option
                                         key={person.id}
                                         className={({ active }) =>
@@ -78,3 +80,5 @@ export default function MultiSelectInputOption({ }) {
         </Listbox>
     )
 }
+
+export default MultiSelectInputOption

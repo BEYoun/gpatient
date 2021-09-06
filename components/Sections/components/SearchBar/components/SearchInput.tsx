@@ -1,17 +1,15 @@
 import { Popover, Transition } from "@headlessui/react";
-import { ChevronDownIcon, InboxIcon, SearchIcon } from "@heroicons/react/solid";
-import React, { Fragment, useState } from "react";
+import { SearchIcon } from "@heroicons/react/solid";
+import React, { Fragment } from "react";
+import { useGetSpecialitiesQuery } from "../../../../../graphql/generated/graphql";
 
-const solutions = [
-    {
-        name: 'Insights',
-        description: 'Measure actions your users take',
-        href: '##',
-        icon: <InboxIcon />,
-    },
-]
 
 const SearchInput = () => {
+    const { data: specialities, loading, error } = useGetSpecialitiesQuery();
+    if (loading)
+        return <div>loadign</div>
+    if (error || specialities == undefined)
+        return <div>err</div>
     return (
         <div className="flex-1 px-0 relative w-full">
             <div className="flex items-center lg:max-w-none lg:mx-0 xl:px-0">
@@ -30,11 +28,11 @@ const SearchInput = () => {
                                     </div>
                                     <Popover.Button className="w-full">
                                         <input
-                                            id="search"
-                                            name="search"
+                                            id="searchSpeciality"
+                                            name="searchSpeciality"
                                             className="block w-full bg-white border border-gray-300 rounded-md py-3 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-rose-500 focus:border-rose-500 sm:text-sm"
-                                            placeholder="Search"
-                                            type="search"
+                                            placeholder="Search Speciality"
+                                            type="searchSpeciality"
                                         />
                                     </Popover.Button>
                                 </div>
@@ -56,8 +54,12 @@ const SearchInput = () => {
                                         static
                                         className="absolute z-50 inset-x-0  transition transform origin-top-right"
                                     >
-                                        <div className="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50 p-4 mt-2">
-                                            dqsdq
+                                        <div className="rounded-lg shadow-lg bg-white p-4 mt-2 max-h-60 overflow-auto focus:outline-none space-y-2 text-base">
+                                            {specialities.getSpecialities?.map((s) => (
+                                                <div key={s?.id}>
+                                                    {s?.name}
+                                                </div>
+                                            ))}
                                         </div>
                                     </Popover.Panel>
                                 </Transition>

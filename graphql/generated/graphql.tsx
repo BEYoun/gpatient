@@ -149,6 +149,8 @@ export type Query = {
   getDoctors: PaginationDoctors;
   getAllPatients?: Maybe<Array<Maybe<Patient>>>;
   getPatientById: Patient;
+  getCities?: Maybe<Array<Maybe<City>>>;
+  getSpecialities?: Maybe<Array<Maybe<Speciality>>>;
 };
 
 
@@ -232,6 +234,17 @@ export type RegisterMutation = (
   ) }
 );
 
+export type GetCitiesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetCitiesQuery = (
+  { __typename?: 'Query' }
+  & { getCities?: Maybe<Array<Maybe<(
+    { __typename?: 'City' }
+    & Pick<City, 'id' | 'name'>
+  )>>> }
+);
+
 export type GetDoctorsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -252,6 +265,17 @@ export type GetDoctorsQuery = (
       )> }
     )>>> }
   ) }
+);
+
+export type GetSpecialitiesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetSpecialitiesQuery = (
+  { __typename?: 'Query' }
+  & { getSpecialities?: Maybe<Array<Maybe<(
+    { __typename?: 'Speciality' }
+    & Pick<Speciality, 'id' | 'name'>
+  )>>> }
 );
 
 export type MeQueryVariables = Exact<{ [key: string]: never; }>;
@@ -373,6 +397,41 @@ export function useRegisterMutation(baseOptions?: Apollo.MutationHookOptions<Reg
 export type RegisterMutationHookResult = ReturnType<typeof useRegisterMutation>;
 export type RegisterMutationResult = Apollo.MutationResult<RegisterMutation>;
 export type RegisterMutationOptions = Apollo.BaseMutationOptions<RegisterMutation, RegisterMutationVariables>;
+export const GetCitiesDocument = gql`
+    query GetCities {
+  getCities {
+    id
+    name
+  }
+}
+    `;
+
+/**
+ * __useGetCitiesQuery__
+ *
+ * To run a query within a React component, call `useGetCitiesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetCitiesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetCitiesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetCitiesQuery(baseOptions?: Apollo.QueryHookOptions<GetCitiesQuery, GetCitiesQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetCitiesQuery, GetCitiesQueryVariables>(GetCitiesDocument, options);
+      }
+export function useGetCitiesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetCitiesQuery, GetCitiesQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetCitiesQuery, GetCitiesQueryVariables>(GetCitiesDocument, options);
+        }
+export type GetCitiesQueryHookResult = ReturnType<typeof useGetCitiesQuery>;
+export type GetCitiesLazyQueryHookResult = ReturnType<typeof useGetCitiesLazyQuery>;
+export type GetCitiesQueryResult = Apollo.QueryResult<GetCitiesQuery, GetCitiesQueryVariables>;
 export const GetDoctorsDocument = gql`
     query GetDoctors {
   getDoctors {
@@ -421,6 +480,41 @@ export function useGetDoctorsLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions
 export type GetDoctorsQueryHookResult = ReturnType<typeof useGetDoctorsQuery>;
 export type GetDoctorsLazyQueryHookResult = ReturnType<typeof useGetDoctorsLazyQuery>;
 export type GetDoctorsQueryResult = Apollo.QueryResult<GetDoctorsQuery, GetDoctorsQueryVariables>;
+export const GetSpecialitiesDocument = gql`
+    query GetSpecialities {
+  getSpecialities {
+    id
+    name
+  }
+}
+    `;
+
+/**
+ * __useGetSpecialitiesQuery__
+ *
+ * To run a query within a React component, call `useGetSpecialitiesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useGetSpecialitiesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useGetSpecialitiesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useGetSpecialitiesQuery(baseOptions?: Apollo.QueryHookOptions<GetSpecialitiesQuery, GetSpecialitiesQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<GetSpecialitiesQuery, GetSpecialitiesQueryVariables>(GetSpecialitiesDocument, options);
+      }
+export function useGetSpecialitiesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<GetSpecialitiesQuery, GetSpecialitiesQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<GetSpecialitiesQuery, GetSpecialitiesQueryVariables>(GetSpecialitiesDocument, options);
+        }
+export type GetSpecialitiesQueryHookResult = ReturnType<typeof useGetSpecialitiesQuery>;
+export type GetSpecialitiesLazyQueryHookResult = ReturnType<typeof useGetSpecialitiesLazyQuery>;
+export type GetSpecialitiesQueryResult = Apollo.QueryResult<GetSpecialitiesQuery, GetSpecialitiesQueryVariables>;
 export const MeDocument = gql`
     query Me {
   userSession(me: true) {

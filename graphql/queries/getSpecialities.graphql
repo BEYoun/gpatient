@@ -1,0 +1,6 @@
+query GetSpecialities {
+  getSpecialities {
+    id
+    name
+  }
+}
