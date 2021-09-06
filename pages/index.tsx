@@ -15,21 +15,22 @@ import etape2 from '../assets/etape2.svg'
 import etape3 from '../assets/etape3.svg'
 import Head from 'next/head'
 import Hero from '../components/Sections/Hero'
+import Etape from '../components/Sections/Etape'
 
 const etapes = [
   {
     title: 'Je crée un compte',
-    href: '#',
+    href: '/',
     imageUrl: etape1,
   },
   {
     title: 'Je recherche une spécialité',
-    href: '#',
+    href: '/',
     imageUrl: etape2,
   },
   {
     title: 'Je choisis mon practicien',
-    href: '#',
+    href: '/',
     imageUrl: etape3,
   },
 ]
@@ -68,26 +69,8 @@ const Home: React.FC = () => {
               </p>
             </div>
             <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-              {etapes.map((post) => (
-                <div key={post.title} className="flex flex-col rounded-lg shadow-lg overflow-hidden text-center bg-white">
-                  <div className="flex-shrink-0">
-                    <div className="h-64 w-full relative object-cover">
-                      <Image
-                        src={post.imageUrl}
-                        alt="logo"
-                        layout="fill"
-                        objectFit="contain"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                    <div className="flex-1">
-                      <a href={post.href} className="block mt-2">
-                        <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+              {etapes.map((e) => (
+                <Etape key={e.title} title={e.title} href={e.href} imageUrl={e.imageUrl} />
               ))}
             </div>
           </div>
