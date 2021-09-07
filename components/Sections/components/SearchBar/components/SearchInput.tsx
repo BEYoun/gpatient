@@ -11,9 +11,9 @@ const SearchInput = () => {
 
     const [ccNumber, setCcNumber] = useState("");
     const ccNumberRef = useRef(null);
-    // useEffect(() => {
-    //     ccNumberRef.current && (ccNumberRef as any).current.focus();
-    // }, []);
+    useEffect(() => {
+        setSpecialitiesView(specialities?.getSpecialities)
+    }, [specialities]);
     const onChangeCcNumber = (e: any) => {
         setSpecialitiesView(specialities?.getSpecialities?.filter((x) => x?.name?.toLowerCase().includes(e.target.value)))
         setCcNumber(e.target.value);
