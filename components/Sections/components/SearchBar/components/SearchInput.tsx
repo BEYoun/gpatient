@@ -15,7 +15,7 @@ const SearchInput = () => {
         setSpecialitiesView(specialities?.getSpecialities)
     }, [specialities]);
     const onChangeCcNumber = (e: any) => {
-        setSpecialitiesView(specialities?.getSpecialities?.filter((x) => x?.name?.toLowerCase().includes(e.target.value)))
+        setSpecialitiesView(specialities?.getSpecialities?.filter((x) => x?.name?.toLowerCase().includes(e.target.value.toLowerCase())))
         setCcNumber(e.target.value);
     };
 
