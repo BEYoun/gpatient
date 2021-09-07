@@ -31,7 +31,7 @@ const SearchInput = () => {
 
     if (loading)
         return <div>loadign</div>
-    if (error || specialitiesView == undefined)
+    if (error || specialities == undefined)
         return <div>err</div>
     return (
         <div className="flex-1 px-0 relative w-full">
@@ -77,7 +77,7 @@ const SearchInput = () => {
                                 className="absolute z-50 inset-x-0  transition transform origin-top-right"
                             >
                                 <div className="rounded-lg shadow-lg bg-white p-4 mt-2 max-h-60 overflow-auto focus:outline-none space-y-2 text-base">
-                                    {specialitiesView.map((s) => (
+                                    {specialitiesView?.map((s) => (
                                         <div key={s?.id}>
                                             {s?.name}
                                         </div>
