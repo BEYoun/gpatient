@@ -12,7 +12,7 @@ const BannerSecurity: React.FC = ({ }) => {
                             Votre santé. Vos données.
                         </h2>
                         <p className="mt-6 mx-auto max-w-2xl text-lg text-rose-100">
-                            La confidentialité de vos informations personnelles est une priorité absolue pour Doctolib et guide notre action au quotidien.
+                            La confidentialité de vos informations personnelles est une priorité absolue pour Goodoc et guide notre action au quotidien.
                         </p>
                         <div className="mt-5 sm:mt-6 sm:flex-shrink-0 sm:flex sm:items-center">
                             <button
